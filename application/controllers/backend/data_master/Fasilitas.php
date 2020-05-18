@@ -129,7 +129,7 @@ class Fasilitas extends CI_Controller
                 $data = array(
                     'id_fasilitas'          => $id_fasilitas,
                     'id_pegawai'            => $this->session->userdata('id_pegawai'),
-                    'judul_foto'                 => $this->input->post('judul_foto'),
+                    'judul_foto'            => $this->input->post('judul_foto'),
                     'foto'                  => $upload_gambar['upload_data']['file_name'],
                 );
                 $this->m_fasilitas->simpan_add_foto($data);

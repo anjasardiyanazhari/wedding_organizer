@@ -196,9 +196,9 @@ class Rekening extends CI_Controller
             //Masuk Database Rekening
             $data = array(
                 'id_rekening'        => $id_rekening,
-                'nama_bank'                 => $this->input->post('nama_bank'),
-                'nomor_rekening'            => $this->input->post('nomor_rekening'),
-                'nama_pemilik'              => $this->input->post('nama_pemilik'),
+                'nama_bank'          => $this->input->post('nama_bank'),
+                'nomor_rekening'     => $this->input->post('nomor_rekening'),
+                'nama_pemilik'       => $this->input->post('nama_pemilik'),
             );
             $this->m_rekening->simpan_edit($id_rekening, $data);
             $this->session->set_flashdata('success', 'Data Telah Di Update');

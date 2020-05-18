@@ -32,7 +32,7 @@ class Informasi extends CI_Controller
         $data = array(
             'title'             => 'Dashboard',
             'site'              => $site,
-            'header_transaksi'      => $header_transaksi,
+            'header_transaksi'  => $header_transaksi,
             'halaman'           => 'frontend/dashboard/informasi/v_list',
         );
         $this->load->view('frontend/layout/v_wrapper', $data);
@@ -296,12 +296,12 @@ class Informasi extends CI_Controller
 
                     $site = $this->m_konfigurasi->getAll();
                     $data = array(
-                        'title'             => 'Konfirmasi Pembayaran',
-                        'site'              => $site,
+                        'title'                 => 'Konfirmasi Pembayaran',
+                        'site'                  => $site,
                         'header_transaksi'      => $header_transaksi,
-                        'rekening'      => $rekening,
-                        'error'    => $this->upload->display_errors(),
-                        'halaman'           => 'frontend/dashboard/informasi/v_konfirmasi',
+                        'rekening'              => $rekening,
+                        'error'                 => $this->upload->display_errors(),
+                        'halaman'               => 'frontend/dashboard/informasi/v_konfirmasi',
                     );
 
                     $this->load->view('frontend/layout/v_wrapper', $data);
@@ -357,15 +357,15 @@ class Informasi extends CI_Controller
                 // Kondisi ketika edit produk tapi tidak ganti gambar
                 // Masuk Database Fasilitas
                 $data = array(
-                    'id_header_transaksi'    => $header_transaksi->id_header_transaksi,
-                    'status_bayar'         => 'konfirmasi',
-                    'jumlah_bayar'         => $this->input->post('jumlah_bayar'),
-                    'rekening_pembayaran'         => $this->input->post('rekening_pembayaran'),
-                    'rekening_pelanggan'         => $this->input->post('rekening_pelanggan'),
-                    // 'bukti_bayar'           => $upload_gambar['upload_data']['file_name'],
-                    'id_rekening'          => $this->input->post('id_rekening'),
-                    'tanggal_bayar'          => $this->input->post('tanggal_bayar'),
-                    'nama_bank'          => $this->input->post('nama_bank'),
+                    'id_header_transaksi'   => $header_transaksi->id_header_transaksi,
+                    'status_bayar'          => 'konfirmasi',
+                    'jumlah_bayar'          => $this->input->post('jumlah_bayar'),
+                    'rekening_pembayaran'   => $this->input->post('rekening_pembayaran'),
+                    'rekening_pelanggan'    => $this->input->post('rekening_pelanggan'),
+                    // 'bukti_bayar'        => $upload_gambar['upload_data']['file_name'],
+                    'id_rekening'           => $this->input->post('id_rekening'),
+                    'tanggal_bayar'         => $this->input->post('tanggal_bayar'),
+                    'nama_bank'             => $this->input->post('nama_bank'),
                 );
                 $this->m_header_transaksi->simpan_edit($header_transaksi->id_header_transaksi, $data);
                 $this->session->set_flashdata('success', 'Data Telah Di Update');
@@ -375,11 +375,11 @@ class Informasi extends CI_Controller
 
         $site = $this->m_konfigurasi->getAll();
         $data = array(
-            'title'             => 'Konfirmasi Pembayaran',
-            'site'              => $site,
+            'title'                 => 'Konfirmasi Pembayaran',
+            'site'                  => $site,
             'header_transaksi'      => $header_transaksi,
-            'rekening'      => $rekening,
-            'halaman'           => 'frontend/dashboard/informasi/v_konfirmasi',
+            'rekening'              => $rekening,
+            'halaman'               => 'frontend/dashboard/informasi/v_konfirmasi',
         );
 
         $this->load->view('frontend/layout/v_wrapper', $data);
@@ -405,106 +405,4 @@ class Informasi extends CI_Controller
         $this->session->set_flashdata('success', 'Data Berhasil Dihapus');
         redirect(base_url('frontend/dashboard/informasi/index'), 'refresh');
     }
-
-    // function proses_konfirmasi()
-    // {
-    //     $kode_transaksi = $this->input->post('kode_transaksi');
-
-    //     // Validasi Input
-    //     $valid = $this->form_validation;
-
-    //     $valid->set_rules(
-    //         'nama_fasilitas',
-    //         'Nama Fasilitas',
-    //         'required',
-    //         array(
-    //             'required'          => '%s Harus Diisi',
-    //         )
-    //     );
-
-    //     if ($valid->run() == FALSE) {
-    //         $this->konfirmasi($kode_transaksi);
-    //         // End Validasi Input
-    //     } else {
-    //         // Falidasi Foto Jika Diganti
-    //         if (!empty($_FILES['foto']['name'])) {
-    //             // Falidasi Foto
-    //             $config['upload_path']          = './assets/backend/img/fasilitas/asli/';
-    //             $config['allowed_types']        = 'jpg|png|jpeg';
-    //             $config['max_size']             = '3000';
-    //             $config['max_width']            = '3000';
-    //             $config['max_height']           = '3000';
-
-    //             $this->load->library('upload');
-    //             $this->upload->initialize($config);
-
-    //             if (!$this->upload->do_upload('foto')) {
-    //                 $this->session->set_flashdata('error', 'Foto Gagal Di Upload');
-    //                 $this->konfirmasi($kode_transaksi);
-    //                 // End Validasi Input
-    //             } else {
-    //                 // Ambil Detail Fasilitas
-    //                 $isi = $this->m_fasilitas->getWhere($kode_transaksi);
-
-    //                 // Delete Foto di Tbl Fasilitas
-    //                 if ($isi->foto != '') {
-    //                     unlink('./assets/backend/img/fasilitas/asli/' . $isi->foto);
-    //                     unlink('./assets/backend/img/fasilitas/thumbnail/' . $isi->foto);
-    //                 }
-    //                 // End Delete Foto di Tbl Fasilitas
-
-    //                 // Falidasi Foto
-    //                 $upload_gambar = array('upload_data' => $this->upload->data());
-
-    //                 // Create thumbnail
-    //                 $config['image_library']        = 'gd2';
-    //                 $config['source_image']         = './assets/backend/img/fasilitas/asli/' . $upload_gambar['upload_data']['file_name'];
-
-    //                 // Lokasi folder thumbnail
-    //                 $config['new_image']            = './assets/backend/img/fasilitas/thumbnail/';
-    //                 $config['create_thumb']         = TRUE;
-    //                 $config['maintain_ratio']       = TRUE;
-    //                 $config['width']                = 1000;
-    //                 $config['height']               = 1500;
-    //                 $config['thumb_marker']         = '';
-
-    //                 $this->load->library('image_lib', $config);
-    //                 $this->image_lib->resize();
-    //                 // End create thumbnail
-
-    //                 //Masuk Database Fasilitas
-    //                 $data = array(
-    //                     // 'id_header_transaksi'    => $header_transaksi->id_header_transaksi,
-    //                     'status_bayar'         => 'konfirmasi',
-    //                     'jumlah_bayar'         => $this->input->post('jumlah_bayar'),
-    //                     'rekening_pembayaran'         => $this->input->post('rekening_pembayaran'),
-    //                     'rekening_pelanggan'         => $this->input->post('rekening_pelanggan'),
-    //                     'bukti_bayar'          => $this->input->post('bukti_bayar'),
-    //                     'id_rekening'          => $this->input->post('id_rekening'),
-    //                     'tanggal_bayar'          => $this->input->post('tanggal_bayar'),
-    //                     'nama_bank'          => $this->input->post('nama_bank'),
-    //                 );
-    //                 $this->m_fasilitas->simpan_edit($kode_transaksi, $data);
-    //                 $this->session->set_flashdata('success', 'Data Telah Di Update');
-    //                 redirect(base_url('backend/data_master/Fasilitas/index'), 'refresh');
-    //             }
-    //         } else {
-    //             //Masuk Database Fasilitas
-    //             $data = array(
-    //                 // 'id_header_transaksi'    => $header_transaksi->id_header_transaksi,
-    //                 'status_bayar'         => 'konfirmasi',
-    //                 'jumlah_bayar'         => $this->input->post('jumlah_bayar'),
-    //                 'rekening_pembayaran'         => $this->input->post('rekening_pembayaran'),
-    //                 'rekening_pelanggan'         => $this->input->post('rekening_pelanggan'),
-    //                 'bukti_bayar'          => $this->input->post('bukti_bayar'),
-    //                 'id_rekening'          => $this->input->post('id_rekening'),
-    //                 'tanggal_bayar'          => $this->input->post('tanggal_bayar'),
-    //                 'nama_bank'          => $this->input->post('nama_bank'),
-    //             );
-    //             $this->m_fasilitas->simpan_edit($kode_transaksi, $data);
-    //             $this->session->set_flashdata('success', 'Data Telah Di Update');
-    //             redirect(base_url('backend/data_master/Fasilitas/index'), 'refresh');
-    //         }
-    //     }
-    // }
 }

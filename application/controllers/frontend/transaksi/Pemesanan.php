@@ -59,7 +59,7 @@ class Pemesanan extends CI_Controller
         // Jika Ada rowid
         if ($rowid) {
             $data = array(
-                'rowid'      => $rowid,
+                'rowid'     => $rowid,
                 'qty'       => $this->input->post('qty')
             );
             $this->cart->update($data);

@@ -22,8 +22,5 @@
                 <a href="<?php echo base_url('frontend/dashboard/Informasi/delete_penyewaan/' . $isi->kode_transaksi) ?>" class="btn btn-success"> Ya, saya yakin</a>
             </div>
         </div>
-        <!-- /.modal-content -->
     </div>
-    <!-- /.modal-dialog -->
 </div>
-<!-- /.modal -->

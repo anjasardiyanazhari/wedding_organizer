@@ -48,6 +48,7 @@ class Fasilitas extends CI_Controller
         $config['first_tagl_close'] = '</span></li>';
         $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
         $config['last_tagl_close']  = '</span></li>';
+        // End Style Pagination 
 
         $config['first_url']            = base_url() . 'frontend/data_master/Fasilitas/';
 
@@ -115,6 +116,7 @@ class Fasilitas extends CI_Controller
         $config['first_tagl_close'] = '</span></li>';
         $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
         $config['last_tagl_close']  = '</span></li>';
+        // End Style Pagination 
 
         $config['first_url']            = base_url() . 'frontend/data_master/Fasilitas/kategori/' . $slug_kategori;
 
@@ -149,12 +151,12 @@ class Fasilitas extends CI_Controller
         $fasilitas_related = $this->m_fasilitas->home($id_fasilitas);
 
         $data = array(
-            'title'             => $fasilitas_read->nama_fasilitas,
-            'site'              => $site,
-            'fasilitas_read'    => $fasilitas_read,
-            'foto'              => $foto,
-            'fasilitas_related'              => $fasilitas_related,
-            'halaman'           => 'frontend/data_master/fasilitas/v_detail',
+            'title'                 => $fasilitas_read->nama_fasilitas,
+            'site'                  => $site,
+            'fasilitas_read'        => $fasilitas_read,
+            'foto'                  => $foto,
+            'fasilitas_related'     => $fasilitas_related,
+            'halaman'               => 'frontend/data_master/fasilitas/v_detail',
         );
         // Ambil Data Pemesanan chart_check
         $data['fasilitas'] = $this->m_konfigurasi->getAll();
