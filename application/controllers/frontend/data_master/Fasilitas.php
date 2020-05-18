@@ -29,7 +29,7 @@ class Fasilitas extends CI_Controller
         $config['uri_segment']          = 5;
         $config['num_links']            = 9;
 
-         // Style Pagination
+        // Style Pagination
         $config['first_link']       = 'First';
         $config['last_link']        = 'Last';
         $config['next_link']        = 'Next';
@@ -89,7 +89,7 @@ class Fasilitas extends CI_Controller
         // Start Pagination
         $this->load->library('pagination');
 
-        $config['base_url']             = base_url() . 'frontend/data_master/fasilitas/kategori/' . $slug_kategori . 'index/';
+        $config['base_url']             = base_url() . 'frontend/data_master/fasilitas/kategori/' . $slug_kategori . '/index/';
         $config['total_rows']           = $total->total;
         $config['use_page_numbers']     = TRUE;
         $config['per_page']             = 9;
@@ -115,7 +115,7 @@ class Fasilitas extends CI_Controller
         $config['first_tagl_close'] = '</span></li>';
         $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
         $config['last_tagl_close']  = '</span></li>';
-        
+
         $config['first_url']            = base_url() . 'frontend/data_master/Fasilitas/kategori/' . $slug_kategori;
 
         $this->pagination->initialize($config);
