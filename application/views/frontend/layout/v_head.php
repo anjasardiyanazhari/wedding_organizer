@@ -59,6 +59,11 @@ $site = $this->m_konfigurasi->getAll();
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/hookup/css/icomoon.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/hookup/css/style.css">
 </head>
-
+<style>
+    .header-area {
+        position: fixed;
+        top: 0;
+    }
+</style>
 
 <body class="animsition">

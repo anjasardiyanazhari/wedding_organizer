@@ -46,9 +46,9 @@
                             <table id="example1" class="table table-bordered table-stripe ">
                                 <thead>
                                     <tr class="bg-success">
-                                        <th >NO</th>
+                                        <th>NO</th>
                                         <th>KODE TRANSAKSI</th>
-                                        <th >TANGGAL ACARA</th>
+                                        <th>TANGGAL ACARA</th>
                                         <th>TANGGAL SELESAI</th>
                                         <th>JUMLAH HARI</th>
                                         <th>JUMLAH ITEM</th>
@@ -82,11 +82,11 @@
                                             <td><?php echo number_format($isi->jumlah_transaksi) ?></td>
                                             <td> <span class="badge bg-primary"><?php echo number_format($isi->jumlah_transaksi * $jmlHari, 0, ',', '.') ?></span></td>
                                             <td><?php echo $isi->status_bayar ?></td>
-                                            <td style="text-align: center">
+                                            <td>
                                                 <div class="btn-group">
+                                                    <?php include('v_delete.php') ?>
                                                     <a href="<?php echo base_url('frontend/dashboard/Informasi/detail/' . $isi->kode_transaksi) ?>" class="btn btn-danger btn-sm"><i class="fa fa-eye"></i> Detail</a>
                                                     <a href="<?php echo base_url('frontend/dashboard/Informasi/konfirmasi/' . $isi->kode_transaksi) ?>" class="btn btn-info btn-sm"><i class="fa fa-upload"></i> Konfirmasi</a>
-                                                    <a onclick="return confirm('Apakah Anda Yakin ?')" href="<?php echo base_url('frontend/dashboard/Informasi/delete_penyewaan/' . $isi->kode_transaksi) ?>" class="btn btn-warning btn-sm"><i class="fa fa-trash"></i> Delete</a>
                                                 </div>
                                             </td>
                                         </tr>
