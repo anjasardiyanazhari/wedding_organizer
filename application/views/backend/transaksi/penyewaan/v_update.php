@@ -107,10 +107,10 @@ if ($this->session->flashdata('success')) {
         <!-- accepted payments column -->
         <div class="col-6">
             <p class="lead">Payment Methods:</p>
-            <img src="<?php echo base_url() ?>assets/frontend/images/icons/visa.png" alt="Visa">
-            <img src="<?php echo base_url() ?>assets/frontend/images/icons/mastercard.png" alt="Mastercard">
-            <img src="<?php echo base_url() ?>assets/frontend/images/icons/american-express.png" alt="American Express">
-            <img src="<?php echo base_url() ?>assets/frontend/images/icons/paypal2.png" alt="Paypal">
+            <img src="<?php echo base_url() ?>assets/backend/img/home/credit/visa.png" alt="Visa">
+            <img src="<?php echo base_url() ?>assets/backend/img/home/credit/mastercard.png" alt="Mastercard">
+            <img src="<?php echo base_url() ?>assets/backend/img/home/credit/american-express.png" alt="American Express">
+            <img src="<?php echo base_url() ?>assets/backend/img/home/credit/paypal2.png" alt="Paypal">
 
             <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
                 Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem

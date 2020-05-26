@@ -1,5 +1,5 @@
 <!-- Title Page -->
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url('<?php echo base_url() ?>assets/frontend/images/heading5.png');">
+<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url('<?php echo base_url() ?>assets/backend/img/home/heading5.png');">
     <h2 class="l-text2 t-center">
         <?php echo $title ?>
     </h2>
@@ -158,10 +158,10 @@
                                     <div class="col-sm-9">
                                         <div class="bo4 of-hidden size15 m-b-0">
                                             <input type="text" class="sizefull s-text7 p-l-22 p-r-22" name="jumlah_bayar" id="jumlah_bayar" placeholder="Jumlah Pembayaran" value="<?php if (isset($_POST['jumlah_bayar'])) {
-                                                                                                                                                                                            echo set_value('jumlah_bayar');
-                                                                                                                                                                                        } else {
-                                                                                                                                                                                            echo number_format($header_transaksi->jumlah_bayar, '0', ',', '.');
-                                                                                                                                                                                        } ?>">
+                                                                                                                                                                                        echo set_value('jumlah_bayar');
+                                                                                                                                                                                    } else {
+                                                                                                                                                                                        echo number_format($header_transaksi->jumlah_bayar, '0', ',', '.');
+                                                                                                                                                                                    } ?>">
                                         </div>
                                     </div>
                                 </div>

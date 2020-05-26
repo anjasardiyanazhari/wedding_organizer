@@ -69,7 +69,7 @@
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;<script>
                         document.write(new Date().getFullYear());
-                    </script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    </script> All rights reserved | Golden Care <i class="icon-heart color-danger" aria-hidden="true"></i>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
             </div>
@@ -81,7 +81,7 @@
 <div style="position:fixed;right:20px;bottom:20px;">
     <a href="https://api.whatsapp.com/send?phone=+<?php echo $site->no_telp ?>&text=Halo, Saya ingin konsultasi jasa wedding organizer Golden Care" target="_blank">
         <button style="background:#32C03C; color: white; vertical-align:center;height:40px;width:200px; border-radius:5px" ;>
-            <img src="<?php echo base_url() ?>assets/frontend/images/icons/app.png" style="font-family: Arial, Helvetica, sans-serif"> WhatsApp Kami
+            <img src="<?php echo base_url() ?>assets/backend/img/home/app.png" style="font-family: Arial, Helvetica, sans-serif"> WhatsApp Kami
         </button>
     </a>
 </div>

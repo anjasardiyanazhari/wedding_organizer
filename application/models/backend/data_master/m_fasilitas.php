@@ -23,7 +23,6 @@ class m_fasilitas extends CI_Model
         // End Join
         $this->db->group_by('tbl_fasilitas.id_fasilitas');
         $this->db->order_by('id_fasilitas', 'desc');
-        $this->db->limit(12);
 
         return $this->db->get()->result();
     }

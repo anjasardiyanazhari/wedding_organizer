@@ -30,13 +30,13 @@
         <!-- Messages Dropdown Menu -->
         <li class="nav-item dropdown user-menu">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                <img src="<?php echo base_url() ?>assets/backend/img/foto_user/user3-128x128.jpg" class="user-image img-circle elevation-2" alt="User Image">
+                <img src="<?php echo base_url() ?>assets/backend/img/user/user3-128x128.jpg" class="user-image img-circle elevation-2" alt="User Image">
                 <span class="d-none d-md-inline"> <?php echo $this->session->userdata('nama'); ?></span>
             </a>
             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                 <!-- User image -->
                 <li class="user-header bg-primary">
-                    <img src="<?php echo base_url() ?>assets/backend/img/foto_user/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+                    <img src="<?php echo base_url() ?>assets/backend/img/user/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
 
                     <p>
                         <?php echo $this->session->userdata('nama'); ?> - <?php echo $this->session->userdata('akses_level');  ?>

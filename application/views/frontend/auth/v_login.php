@@ -19,7 +19,7 @@
     <div class="page-content">
         <div class="form-v7-content">
             <div class="form-left">
-                <img src="<?php echo base_url() ?>assets/frontend/login/images/login.jpg" alt="form">
+                <img src="<?php echo base_url() ?>assets/backend/img/login/login.jpg" alt="form">
                 <p class="text-1">Sign In</p>
                 <p class="text-2">Privaci policy & Term of service</p>
             </div>

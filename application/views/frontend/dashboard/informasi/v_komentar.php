@@ -1,5 +1,5 @@
 <!-- Title Page -->
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url('<?php echo base_url() ?>assets/frontend/images/heading6.png');">
+<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url('<?php echo base_url() ?>assets/backend/img/home/heading6.png');">
     <h2 class="l-text2 t-center">
         <?php echo $title ?>
     </h2>

@@ -58,12 +58,12 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
         ?>
 
             <div class="header-wrapicon2">
-                <img src="<?php echo base_url() ?>assets/frontend/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                <img src="<?php echo base_url() ?>assets/backend/img/home/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
                 <!-- Header cart noti -->
                 <div class="header-cart header-dropdown">
 
                     <div class="header" style="text-align: center">
-                        <img src="<?php echo base_url() ?>assets/frontend/images/icons/avatar.png" class="img-circle" alt="User Image" style="border-radius: 50%; overflow: hidden; border: 5px solid #666; ">
+                        <img src="<?php echo base_url() ?>assets/backend/img/user/avatar.png" class="img-circle" alt="User Image" style="border-radius: 50%; overflow: hidden; border: 5px solid #666; ">
                         <span class="input-group-text><i class=" fa fa-calendar"></i></span>
                         <p>
                             <h6>Nama:<?php echo $this->session->userdata('nama'); ?></h6>
@@ -95,7 +95,7 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
         <?php } else { ?>
 
             <a href="<?php echo base_url('frontend/auth/Login') ?>" class="header-wrapicon1 dis-block">
-                <img src="<?php echo base_url() ?>assets/frontend/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+                <img src="<?php echo base_url() ?>assets/backend/img/home/icon-header-01.png" class="header-icon1" alt="ICON">
             </a>
 
         <?php } ?>
@@ -109,7 +109,7 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
             $chart_check = $this->cart->contents();
             ?>
 
-            <img src="<?php echo base_url() ?>assets/frontend/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+            <img src="<?php echo base_url() ?>assets/backend/img/home/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
             <span class="header-icons-noti"><?php echo count($chart_check) ?></span>
 
             <!-- Header cart noti -->
@@ -207,12 +207,12 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
             ?>
 
                 <div class="header-wrapicon2">
-                    <img src="<?php echo base_url() ?>assets/frontend/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                    <img src="<?php echo base_url() ?>assets/backend/img/home/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
                     <!-- Header cart noti -->
                     <div class="header-cart header-dropdown">
 
                         <div class="header" style="text-align: center">
-                            <img src="<?php echo base_url() ?>assets/frontend/images/icons/avatar.png" class="img-circle" alt="User Image" style="border-radius: 50%; overflow: hidden; border: 5px solid #666; ">
+                            <img src="<?php echo base_url() ?>assets/backend/img/user/avatar.png" class="img-circle" alt="User Image" style="border-radius: 50%; overflow: hidden; border: 5px solid #666; ">
                             <span class="input-group-text><i class=" fa fa-calendar"></i></span>
                             <p>
                                 <h6>Nama:<?php echo $this->session->userdata('nama'); ?></h6><br>
@@ -244,7 +244,7 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
             <?php } else { ?>
 
                 <a href="<?php echo base_url('frontend/auth/Login') ?>" class="header-wrapicon1 dis-block">
-                    <img src="<?php echo base_url() ?>assets/frontend/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+                    <img src="<?php echo base_url() ?>assets/backend/img/home/icon-header-01.png" class="header-icon1" alt="ICON">
                 </a>
 
             <?php } ?>
@@ -258,7 +258,7 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
                 $chart_check_mobile = $this->cart->contents();
                 ?>
 
-                <img src="<?php echo base_url() ?>assets/frontend/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                <img src="<?php echo base_url() ?>assets/backend/img/home/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
                 <span class="header-icons-noti"><?php echo count($chart_check_mobile) ?></span>
 
                 <!-- Header cart noti -->
