@@ -98,7 +98,7 @@
                     ?>
 
                     <tr class="table-row bg-info text-strong" style="font-weight: bold;">
-                        <td colspan="4" class="column-1" style="color: white;">TOTAL PENYEWAAN</td>
+                        <td colspan="4" class="column-1" style="color: white;">TOTAL HARGA/HARI</td>
                         <td colspan="2" class="column-2" style="color: white;">Rp:<?php echo number_format($this->cart->total(), '0', ',', '.') ?></td>
                     </tr>
                 </table>

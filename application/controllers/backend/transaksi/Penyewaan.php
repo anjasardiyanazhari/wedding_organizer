@@ -13,7 +13,7 @@ class Penyewaan extends CI_Controller
         $this->load->model('frontend/transaksi/m_header_transaksi');
         $this->load->model('backend/pengguna/m_pelanggan');
         $this->load->model('frontend/transaksi/m_header_transaksi');
-        $this->load->model('backend/buku/m_komentar');
+        $this->load->model('backend/buku/m_contact');
 
         // Proteksi Halaman
         if ($this->session->userdata('login') == FALSE) {
@@ -46,7 +46,7 @@ class Penyewaan extends CI_Controller
         // Menampilkan Jumlah Total Data ke Sidebar
         $data['total_pelanggan'] = $this->m_pelanggan->getAll();
         $data['total_header_transaksi'] = $this->m_header_transaksi->getAll();
-        $data['total_komentar'] = $this->m_komentar->getAll();
+        $data['total_contact'] = $this->m_contact->getAll();
         $this->load->view('backend/layout/v_wrapper', $data);
     }
 
@@ -71,7 +71,7 @@ class Penyewaan extends CI_Controller
         // Menampilkan Jumlah Total Data ke Sidebar
         $data['total_pelanggan'] = $this->m_pelanggan->getAll();
         $data['total_header_transaksi'] = $this->m_header_transaksi->getAll();
-        $data['total_komentar'] = $this->m_komentar->getAll();
+        $data['total_contact'] = $this->m_contact->getAll();
         $this->load->view('backend/layout/v_wrapper', $data);
     }
 
@@ -96,7 +96,7 @@ class Penyewaan extends CI_Controller
         // Menampilkan Jumlah Total Data ke Sidebar
         $data['total_pelanggan'] = $this->m_pelanggan->getAll();
         $data['total_header_transaksi'] = $this->m_header_transaksi->getAll();
-        $data['total_komentar'] = $this->m_komentar->getAll();
+        $data['total_contact'] = $this->m_contact->getAll();
         $this->load->view('backend/layout/v_wrapper', $data);
     }
 
@@ -132,7 +132,7 @@ class Penyewaan extends CI_Controller
         // Menampilkan Jumlah Total Data ke Sidebar
         $data['total_pelanggan'] = $this->m_pelanggan->getAll();
         $data['total_header_transaksi'] = $this->m_header_transaksi->getAll();
-        $data['total_komentar'] = $this->m_komentar->getAll();
+        $data['total_contact'] = $this->m_contact->getAll();
         $this->load->view('backend/layout/v_wrapper', $data);
     }
 

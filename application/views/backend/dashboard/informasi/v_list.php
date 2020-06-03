@@ -99,15 +99,15 @@
         <!-- small box -->
         <div class="small-box bg-danger">
             <div class="inner">
-                <h3><?php echo count($total_komentar) ?></h3>
+                <h3><?php echo count($total_contact) ?></h3>
 
-                <p>Komentar</p>
+                <p>Message</p>
             </div>
             <div class="icon">
                 <!-- <i class="ion ion-pie-graph"></i> -->
                 <i class="fas fa-comments"></i>
             </div>
-            <a href="<?php echo base_url('backend/buku/Komentar') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url('backend/buku/Contact') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <!-- ./col -->
@@ -124,6 +124,37 @@
                 <i class="fas fa-images"></i>
             </div>
             <a href="<?php echo base_url('backend/dokumentasi/Galleri') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+</div> <br>
+
+<!-- Main content -->
+<div class="row">
+    <div class="col-lg-3 col-6">
+        <div class="sticky-top mb-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Info Events</h4>
+                </div>
+                <div class="card-body">
+                    <!-- the events -->
+                    <div id="external-events">
+                        <div class="external-event bg-primary">Lunas</div>
+                        <div class="external-event bg-danger">Menunggu Konfirmasi</div>
+                        <div class="external-event bg-warning">Menunggu Pembayaran</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.col -->
+    <div class="col-md-9">
+        <div class="card card-primary">
+            <div class="card-body p-0">
+                <!-- THE CALENDAR -->
+                <div id="calendar"></div>
+            </div>
         </div>
     </div>
 </div>

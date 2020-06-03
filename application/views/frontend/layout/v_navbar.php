@@ -6,7 +6,7 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
 
 <div class="wrap_header">
     <!-- Logo -->
-    <a href="<?php echo site_url('frontend/Home') ?>" class="logo">
+    <a href="<?php echo site_url('backend/auth/Login') ?>" class="logo" target="_blank">
         <img src="<?php echo base_url('assets/backend/img/logo/asli/' . $site->logo) ?>" alt="<?php echo $site->nama_web ?>">
     </a>
 
@@ -14,12 +14,20 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
     <div class=" wrap_menu">
         <nav class="menu">
             <ul class="main_menu">
-                <li>
+                <li <?php if ($this->uri->segment(2) == 'Home') {
+                        echo 'class="sale-noti" ';
+                    } else {
+                        echo 'class="nav-item has-treeview"';
+                    } ?>>
                     <a href="<?php echo site_url('frontend/Home') ?>">Home</a>
                 </li>
 
-                <li>
-                    <a href="<?php echo base_url('frontend/data_master/Fasilitas') ?>">Sewa Fasilitas</a>
+                <li <?php if ($this->uri->segment(3) == 'Fasilitas') {
+                        echo 'class="sale-noti" ';
+                    } else {
+                        echo 'class="nav-item has-treeview"';
+                    } ?>>
+                    <a href="<?php echo base_url('frontend/data_master/Fasilitas') ?>">Fasilitas</a>
                     <ul class="sub_menu">
                         <?php
                         foreach ($nav_fasilitas as $nav_fasilitas) :
@@ -35,16 +43,28 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a href="<?php echo site_url('frontend/Home') ?>#lovestory-section" class="nav-link"><span>About</span></a>
+                <li <?php if ($this->uri->segment(2) == 'About') {
+                        echo 'class="sale-noti" ';
+                    } else {
+                        echo 'class="nav-item has-treeview"';
+                    } ?>>
+                    <a href="<?php echo site_url('frontend/About') ?>" class="nav-link"><span>About</span></a>
                 </li>
 
-                <li>
-                    <a href="<?php echo site_url('frontend/Home') ?>#gallery-section" class="nav-link"><span>Galleri</span></a>
+                <li <?php if ($this->uri->segment(2) == 'Gallery') {
+                        echo 'class="sale-noti" ';
+                    } else {
+                        echo 'class="nav-item has-treeview"';
+                    } ?>>
+                    <a href="<?php echo site_url('frontend/Gallery') ?>" class="nav-link"><span>Gallery</span></a>
                 </li>
 
-                <li>
-                    <a href="<?php echo site_url('frontend/Home') ?>#rsvp-section" class="nav-link"><span>Contact</span></a>
+                <li <?php if ($this->uri->segment(2) == 'Contact') {
+                        echo 'class="sale-noti" ';
+                    } else {
+                        echo 'class="nav-item has-treeview"';
+                    } ?>>
+                    <a href="<?php echo site_url('frontend/Contact') ?>"><span>Contact Us</span></a>
                 </li>
             </ul>
         </nav>
@@ -387,8 +407,9 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
             </li>
 
             <li class="item-menu-mobile">
-                <a href="<?php echo base_url('frontend/data_master/Fasilitas') ?>">Sewa Fasilitas</a>
+                <a href="<?php echo base_url('frontend/data_master/Fasilitas') ?>">Fasilitas</a>
                 <ul class="sub-menu">
+
                     <?php
                     foreach ($nav_fasilitas_mobile as $nav_fasilitas_mobile) :
                     ?>
@@ -405,15 +426,15 @@ $nav_fasilitas_mobile   = $this->m_konfigurasi->nav_fasilitas();
             </li>
 
             <li class="item-menu-mobile">
-                <a href="<?php echo site_url('frontend/Home') ?>#lovestory-section" class="nav-link"><span>About</span></a>
+                <a href="<?php echo site_url('frontend/About') ?>" class="nav-link"><span>About</span></a>
             </li>
 
             <li class="item-menu-mobile">
-                <a href="<?php echo site_url('frontend/Home') ?>#gallery-section" class="nav-link"><span>Galleri</span></a>
+                <a href="<?php echo site_url('frontend/Gallery') ?>" class="nav-link"><span>Gallery</span></a>
             </li>
 
             <li class="item-menu-mobile">
-                <a href="<?php echo site_url('frontend/Home') ?>#rsvp-section" class="nav-link"><span>Contact</span></a>
+                <a href="<?php echo site_url('frontend/Contact') ?>" class="nav-link"><span>Contact Us</span></a>
             </li>
         </ul>
     </nav>

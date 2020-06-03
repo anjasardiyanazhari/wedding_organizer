@@ -65,7 +65,7 @@
                                             <td><?php echo $isi->status_bayar ?></td>
                                             <td style="text-align: center">
                                                 <div class="btn-group">
-                                                    <a href="<?php echo base_url('frontend/dashboard/Informasi/detail/' . $isi->kode_transaksi) ?>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i> Detail</a>
+                                                    <a href="<?php echo base_url('frontend/dashboard/Riwayat/detail/' . $isi->kode_transaksi) ?>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i> Detail</a>
                                                 </div>
                                             </td>
                                         </tr>

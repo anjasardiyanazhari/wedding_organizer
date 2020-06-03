@@ -11,7 +11,7 @@ class Home extends CI_Controller
 		$this->load->model('backend/dokumentasi/m_galleri');
 		$this->load->model('backend/data_master/m_kategori');
 		$this->load->model('backend/setting/m_konfigurasi');
-		$this->load->model('backend/buku/m_komentar');
+		$this->load->model('backend/buku/m_contact');
 	}
 
 	//Halaman Utama Dashboard
@@ -41,10 +41,10 @@ class Home extends CI_Controller
 		$data = array(
 			'nama'              => $this->input->post('nama'),
 			'email'          	=> $this->input->post('email'),
-			'komentar'          => $this->input->post('komentar'),
+			'message'          => $this->input->post('message'),
 		);
-		$this->m_komentar->simpan_add($data);
+		$this->m_contact->simpan_add($data);
 		$this->session->set_flashdata('success', 'Data Komentar Telah Terkirim');
-		redirect(base_url('frontend/home/index'), 'refresh');
+		redirect(base_url('frontend/Contact/index'), 'refresh');
 	}
 }

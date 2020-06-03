@@ -13,7 +13,7 @@ class Informasi extends CI_Controller
 		$this->load->model('backend/data_master/m_kategori');
 		$this->load->model('frontend/transaksi/m_header_transaksi');
 		$this->load->model('backend/data_master/m_rekening');
-		$this->load->model('backend/buku/m_komentar');
+		$this->load->model('backend/buku/m_contact');
 		$this->load->model('backend/dokumentasi/m_galleri');
 		$this->load->model('backend/setting/m_konfigurasi');
 
@@ -43,7 +43,7 @@ class Informasi extends CI_Controller
 		$data['total_kategori'] = $this->m_kategori->getAll();
 		$data['total_header_transaksi'] = $this->m_header_transaksi->getAll();
 		$data['total_rekening'] = $this->m_rekening->getAll();
-		$data['total_komentar'] = $this->m_komentar->getAll();
+		$data['total_contact'] = $this->m_contact->getAll();
 		$data['total_galleri'] = $this->m_galleri->getAll();
 		$this->load->view('backend/layout/v_wrapper', $data);
 	}

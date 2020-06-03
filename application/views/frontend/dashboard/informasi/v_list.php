@@ -85,7 +85,7 @@
                                             <td>
                                                 <div class="btn-group">
                                                     <?php include('v_delete.php') ?>
-                                                    <a href="<?php echo base_url('frontend/dashboard/Informasi/detail/' . $isi->kode_transaksi) ?>" class="btn btn-danger btn-sm"><i class="fa fa-eye"></i> Detail</a>
+                                                    <a href="<?php echo base_url('frontend/dashboard/Riwayat/detail/' . $isi->kode_transaksi) ?>" class="btn btn-danger btn-sm"><i class="fa fa-eye"></i> Detail</a>
                                                     <a href="<?php echo base_url('frontend/dashboard/Informasi/konfirmasi/' . $isi->kode_transaksi) ?>" class="btn btn-info btn-sm"><i class="fa fa-upload"></i> Konfirmasi</a>
                                                 </div>
                                             </td>

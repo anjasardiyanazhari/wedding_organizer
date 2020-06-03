@@ -142,8 +142,6 @@
                                         <div class="bo4 of-hidden size15 m-b-0">
                                             <input type="text" class="sizefull s-text7 p-l-22 p-r-22" name="tanggal_bayar" id="tanggal_bayar" placeholder="dd-mm-yyyy" value="<?php if (isset($_POST['tanggal_bayar'])) {
                                                                                                                                                                                     echo set_value('tanggal_bayar');
-                                                                                                                                                                                } elseif ($header_transaksi->tanggal_bayar != "") {
-                                                                                                                                                                                    echo $header_transaksi->tanggal_bayar;
                                                                                                                                                                                 } else {
                                                                                                                                                                                     echo date('d-m-Y');
                                                                                                                                                                                 } ?>">
@@ -160,7 +158,8 @@
                                             <input type="text" class="sizefull s-text7 p-l-22 p-r-22" name="jumlah_bayar" id="jumlah_bayar" placeholder="Jumlah Pembayaran" value="<?php if (isset($_POST['jumlah_bayar'])) {
                                                                                                                                                                                         echo set_value('jumlah_bayar');
                                                                                                                                                                                     } else {
-                                                                                                                                                                                        echo number_format($header_transaksi->jumlah_bayar, '0', ',', '.');
+                                                                                                                                                                                        echo $header_transaksi->jumlah_bayar;
+                                                                                                                                                                                        // echo number_format($header_transaksi->jumlah_bayar, '0', ',', '.');
                                                                                                                                                                                     } ?>">
                                         </div>
                                     </div>
@@ -279,8 +278,7 @@
                                     </div>
                                 </div>
                             </form>
-
-
+                                                                                                                                                                                                
                         </div>
 
                     <?php

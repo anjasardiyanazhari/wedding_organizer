@@ -43,7 +43,7 @@
                     echo validation_errors('<div class="alert alert-warning">', '</div>');
 
                     //Form Open
-                    echo form_open(base_url('frontend/dashboard/Informasi/proses_edit/'), 'class="form-horizontal"');
+                    echo form_open(base_url('frontend/dashboard/Profil/proses_edit/'), 'class="form-horizontal"');
                     ?>
 
                     <div class="bo9 w-size100 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm">

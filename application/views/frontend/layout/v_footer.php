@@ -18,12 +18,12 @@
                 <div class="ftco-footer-widget mb-4 ml-md-4">
                     <h2 class="ftco-heading-2">Service</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Gedung</a></li>
-                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Dekorasi</a></li>
-                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Catering</a></li>
-                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Transportasi</a></li>
-                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Salon</a></li>
-                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Many more..</a></li>
+                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Wellness</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Vintge stores</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Trekking</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Tour</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Sightseeing</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Many more..</a></li>                       
                     </ul>
                 </div>
             </div>
@@ -31,10 +31,11 @@
                 <div class="ftco-footer-widget mb-4 ml-md-4">
                     <h2 class="ftco-heading-2">Links</h2>
                     <ul class="list-unstyled">
-                        <li><a href="<?php echo site_url('frontend/dashboard/Home') ?>#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                        <li><a href="<?php echo site_url('frontend/dashboard/Home') ?>#lovestory-section"><span class=" icon-long-arrow-right mr-2"></span>About</a></li>
-                        <li><a href="<?php echo site_url('frontend/dashboard/Home') ?>#rsvp-section"><span class="icon-long-arrow-right mr-2"></span>Commentar</a></li>
-                        <li><a href="<?php echo site_url('frontend/dashboard/Home') ?>#gallery-section"><span class="icon-long-arrow-right mr-2"></span>Galleri</a></li>
+                        <li><a href="<?php echo site_url('frontend/Home') ?>"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                        <li><a href="<?php echo site_url('frontend/data_master/Fasilitas') ?>"><span class=" icon-long-arrow-right mr-2"></span>Fasilitas</a></li>
+                        <li><a href="<?php echo site_url('frontend/About') ?>"><span class=" icon-long-arrow-right mr-2"></span>About</a></li>
+                        <li><a href="<?php echo site_url('frontend/Gallery') ?>"><span class="icon-long-arrow-right mr-2"></span>Gallery</a></li>
+                        <li><a href="<?php echo site_url('frontend/Contact') ?>"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -69,7 +70,7 @@
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;<script>
                         document.write(new Date().getFullYear());
-                    </script> All rights reserved | Golden Care <i class="icon-heart color-danger" aria-hidden="true"></i>
+                    </script> All rights reserved | Golden Care <i>Wedding Organizer</i> <i class="icon-heart color-danger" aria-hidden="true"></i>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
             </div>

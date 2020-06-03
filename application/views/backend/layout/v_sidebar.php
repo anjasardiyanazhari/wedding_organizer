@@ -282,32 +282,32 @@
                 <!-- Menu Buku Tamu -->
                 <li class="nav-header">BUKU TAMU</li>
                 <!-- Menu Pegawai -->
-                <li <?php if ($this->uri->segment(3) == 'Komentar') {
+                <li <?php if ($this->uri->segment(3) == 'Contact') {
                         echo 'class="nav-item has-treeview menu-open" ';
                     } else {
                         echo 'class="nav-item has-treeview"';
                     } ?>>
-                    <a href="#" <?php if ($this->uri->segment(3) == 'Komentar') {
+                    <a href="#" <?php if ($this->uri->segment(3) == 'Contact') {
                                     echo 'class="nav-link active"';
                                 } else {
                                     echo 'class="nav-link"';
                                 } ?>>
                         <i class="nav-icon fas fa-book"></i>
                         <p>
-                            Komentar
+                            Contact Us
                             <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-warning right"><?php echo count($total_komentar) ?></span>
+                            <span class="badge badge-warning right"><?php echo count($total_contact) ?></span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?php echo base_url('backend/buku/Komentar') ?>" <?php if ($this->uri->segment(3) == 'Komentar') {
+                            <a href="<?php echo base_url('backend/buku/Contact') ?>" <?php if ($this->uri->segment(3) == 'Contact') {
                                                                                             echo 'class="nav-link active"';
                                                                                         } else {
                                                                                             echo 'class="nav-link"';
                                                                                         } ?>>
                                 <i class="far fa fa-table nav-icon"></i>
-                                <p>Data Komentar</p>
+                                <p>Data Contact</p>
                             </a>
                         </li>
                     </ul>
