@@ -17,6 +17,9 @@ class Informasi extends CI_Controller
 		$this->load->model('backend/dokumentasi/m_galleri');
 		$this->load->model('backend/setting/m_konfigurasi');
 
+		// Load Calendar
+		$this->load->model('backend/dashboard/m_calendar');
+
 		// Proteksi Halaman
 		if ($this->session->userdata('login') == FALSE) {
 
@@ -46,5 +49,19 @@ class Informasi extends CI_Controller
 		$data['total_contact'] = $this->m_contact->getAll();
 		$data['total_galleri'] = $this->m_galleri->getAll();
 		$this->load->view('backend/layout/v_wrapper', $data);
+	}
+
+	function load_calendar()
+	{
+		$event_data = $this->m_calendar->fetch_all_event();
+		foreach ($event_data->result_array() as $row) {
+			$data[] = array(
+				'id_header_transaksi' 		=> $row['id_header_transaksi'],
+				'nama' 						=> $row['nama'],
+				'tanggal_acara' 			=> $row['tanggal_acara'],
+				'tanggal_selesai_acara' 	=> $row['tanggal_selesai_acara']
+			);
+		}
+		echo json_encode($data);
 	}
 }
