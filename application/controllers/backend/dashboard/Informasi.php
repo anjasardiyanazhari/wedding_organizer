@@ -32,9 +32,9 @@ class Informasi extends CI_Controller
 	public function index()
 	{
 		$data = array(
-			'title'             => 'Administrator',
-			'sub_title'         => 'Wedding Organizer',
-			'halaman'			=> 'backend/dashboard/informasi/v_list'
+			'title' => 'Administrator',
+			'sub_title' => 'Wedding Organizer',
+			'halaman' => 'backend/dashboard/informasi/v_list'
 		);
 		// Ambil Data Konfigurasi Untuk Menampilkan Isi Setting icon
 		$data['site'] = $this->m_konfigurasi->getAll();
@@ -56,10 +56,10 @@ class Informasi extends CI_Controller
 		$event_data = $this->m_calendar->fetch_all_event();
 		foreach ($event_data->result_array() as $row) {
 			$data[] = array(
-				'id_header_transaksi' 		=> $row['id_header_transaksi'],
-				'nama' 						=> $row['nama'],
-				'tanggal_acara' 			=> $row['tanggal_acara'],
-				'tanggal_selesai_acara' 	=> $row['tanggal_selesai_acara']
+				'id' => $row['id_header_transaksi'],
+				'title' => $row['nama'],
+				'start' => $row['tanggal_acara'],
+				'end' => $row['tanggal_selesai_acara']
 			);
 		}
 		echo json_encode($data);
