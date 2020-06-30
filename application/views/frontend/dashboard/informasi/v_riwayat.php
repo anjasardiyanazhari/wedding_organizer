@@ -61,7 +61,7 @@
                                             <td><?php echo $isi->kode_transaksi ?></td>
                                             <td><?php echo date('d-m-Y', strtotime($isi->tanggal_acara)) ?></td>
                                             <td style="text-align: center"><?php echo $isi->total_item ?></td>
-                                            <td><?php echo number_format($isi->jumlah_transaksi) ?></td>
+                                            <td><?php echo number_format($isi->jumlah_transaksi, 0, ',', '.') ?></td>
                                             <td><?php echo $isi->status_bayar ?></td>
                                             <td style="text-align: center">
                                                 <div class="btn-group">

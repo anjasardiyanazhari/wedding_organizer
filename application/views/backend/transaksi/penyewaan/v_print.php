@@ -73,7 +73,11 @@
                 <div class="col-12">
                     <h4>
                         <i class="fas fa-globe"></i> Golden Care.
-                        <small class="float-right">Tanggal Bayar: <?php echo date('d-m-Y', strtotime($header_transaksi->tanggal_bayar)) ?></small>
+                        <small class="float-right"><?php if ($header_transaksi->tanggal_bayar == "") {
+                                                        echo 'Belum melakukan pembayaran';
+                                                    } else {
+                                                        echo date('d-m-Y', strtotime($header_transaksi->tanggal_bayar));
+                                                    } ?></small>
                     </h4>
                 </div>
             </div>
@@ -95,6 +99,7 @@
                         <td>No. Telpon</td><br>
                         <td>Alamat</td><br>
                         <td>Tanggal Acara</td><br>
+                        <td>Tanggal Selesai Acara</td><br>
                         <td>Status</td>
                     </address>
                 </div>
@@ -102,7 +107,8 @@
                     <td>: <b> <?= $header_transaksi->nama; ?></b></td><br>
                     <td>: <?= $header_transaksi->no_telp; ?></td><br>
                     <td>: <?= $header_transaksi->alamat; ?></td><br>
-                    <td>: <?= $header_transaksi->tanggal_acara; ?></td><br>
+                    <td>: <?= date('d-m-Y', strtotime($header_transaksi->tanggal_acara)); ?></td><br>
+                    <td>: <?= date('d-m-Y', strtotime($header_transaksi->tanggal_selesai_acara)); ?></td><br>
                     <td>:
                         <?php if ($header_transaksi->status_bayar == "lunas") {
                             echo '<span class="badge bg-primary">LUNAS</span>';
@@ -178,16 +184,20 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-6">
-                    <p class="lead">Tanggal Bayar: <?php echo date('d-m-Y', strtotime($header_transaksi->tanggal_bayar)) ?></p>
+                    <p class="lead">Tanggal Bayar: <?php if ($header_transaksi->tanggal_bayar == "") {
+                                                        echo 'Belum melakukan pembayaran';
+                                                    } else {
+                                                        echo date('d-m-Y', strtotime($header_transaksi->tanggal_bayar));
+                                                    } ?>
 
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tr>
-                                <th style="width:50%">Total:</th>
-                                <th>Rp:<?php echo number_format($header_transaksi->jumlah_transaksi) ?></th>
-                            </tr>
-                        </table>
-                    </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <th style="width:50%">Total:</th>
+                                    <th>Rp:<?php echo number_format($header_transaksi->jumlah_transaksi) ?></th>
+                                </tr>
+                            </table>
+                        </div>
                 </div>
                 <!-- /.col -->
             </div>

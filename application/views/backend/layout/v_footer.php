@@ -30,17 +30,9 @@
 <!-- jQuery UI -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-<!--<script src="--><?php //// echo base_url() ?><!--assets/backend/adminlte/plugins/plugins/jquery-ui/jquery-ui.min.js"></script>-->
 <!-- fullCalendar 2.2.5 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
-
-<!--<script src="--><?php //echo base_url() ?><!--assets/backend/adminlte/plugins/moment/moment.min.js"></script>-->
-<!--<script src="--><?php //echo base_url() ?><!--assets/backend/adminlte/plugins/fullcalendar/main.min.js"></script>-->
-<!--<script src="--><?php //echo base_url() ?><!--assets/backend/adminlte/plugins/fullcalendar-daygrid/main.min.js"></script>-->
-<!--<script src="--><?php //echo base_url() ?><!--assets/backend/adminlte/plugins/fullcalendar-timegrid/main.min.js"></script>-->
-<!--<script src="--><?php //echo base_url() ?><!--assets/backend/adminlte/plugins/fullcalendar-interaction/main.min.js"></script>-->
-<!--<script src="--><?php //echo base_url() ?><!--assets/backend/adminlte/plugins/fullcalendar-bootstrap/main.min.js"></script>-->
 
 <!-- DataTables -->
 <script src="<?php echo base_url() ?>assets/backend/adminlte/plugins/datatables/jquery.dataTables.js"></script>
@@ -68,30 +60,29 @@
     });
 </script>
 <script>
-	$(document).ready(function(){
-	});
+    $(document).ready(function() {});
 
-	var calendar = $('#calendar').fullCalendar({
-		editable:true,
-		header:{
-			left:'prev,next today',
-			center:'title',
-			right:'month,agendaWeek,agendaDay'
-		},
-		events:"<?php echo base_url(); ?>backend/dashboard/informasi/load_calendar",
-		eventColor: '#00FF00',
-		selectable:true,
-		selectHelper:true,
-		editable:false,
-		eventClick:function(event)
-		{
-			var id = event.id;
-			window.location.href = "<?php echo base_url(); ?>backend/transaksi/Penyewaan";
-		}
-	});
+    var calendar = $('#calendar').fullCalendar({
+        editable: true,
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+        },
+        events: "<?php echo base_url(); ?>backend/dashboard/informasi/load_calendar",
+        eventColor: '#00FF00',
+        selectable: true,
+        selectHelper: true,
+        editable: false,
+        eventClick: function(event) {
+            var id = event.id;
+            window.location.href = "<?php echo base_url('backend/transaksi/Penyewaan/' . $header_transaksi->kode_transaksi); ?>";
+        }
+    });
 </script>
-
 
 </body>
 
 </html>
+<!-- window.location.href = "<?php echo base_url('backend/transaksi/Penyewaan/' . $header_transaksi->kode_transaksi); ?>"; -->
+<!-- window.location.href = "<?php echo base_url(); ?>backend/transaksi/Penyewaan/"; -->

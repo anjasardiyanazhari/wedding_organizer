@@ -18,12 +18,12 @@
                 <div class="ftco-footer-widget mb-4 ml-md-4">
                     <h2 class="ftco-heading-2">Service</h2>
                     <ul class="list-unstyled">
-                    <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Wellness</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Vintge stores</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Trekking</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Tour</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Sightseeing</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Many more..</a></li>                       
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Wellness</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Vintge stores</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Trekking</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Tour</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Sightseeing</a></li>
+                        <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Many more..</a></li>
                     </ul>
                 </div>
             </div>
@@ -108,7 +108,8 @@
 
     flatpickr('#flatpickr', {
         minDate: someDate,
-        dateFormat: "d-m-Y",
+        enebleTime: true,
+        dateFormat: 'Y-m-d H:i:s',
     });
 </script>
 

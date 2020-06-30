@@ -106,7 +106,7 @@ class Penyewaan extends CI_Controller
         $header_transaksi = $this->m_header_transaksi->getKode_transaksi($kode_transaksi);
 
         $this->db->where('id_header_transaksi', $header_transaksi->id_header_transaksi);
-        $this->db->update('tbl_header_transaksi', ['status_bayar' => 'lunas']);
+        $this->db->update('tbl_header_transaksi', ['status_bayar' => 'lunas', 'tanggal_warna' => '#0071c5']);
         redirect(base_url('backend/transaksi/Penyewaan/update/' . $header_transaksi->kode_transaksi), 'refresh');
     }
 

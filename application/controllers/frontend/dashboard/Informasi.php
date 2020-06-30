@@ -144,6 +144,7 @@ class Informasi extends CI_Controller
                     //Masuk Database Fasilitas
                     $data = array(
                         'id_header_transaksi'       => $header_transaksi->id_header_transaksi,
+                        'tanggal_warna'             => '#FF0000',
                         'status_bayar'              => 'konfirmasi',
                         'jumlah_bayar'              => $this->input->post('jumlah_bayar'),
                         'rekening_pembayaran'       => $this->input->post('rekening_pembayaran'),

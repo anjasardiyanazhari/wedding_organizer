@@ -138,7 +138,7 @@
                         <span style="padding-left: 20px"><i class="fa fa-calendar"></i></span>
                         <div class="col-sm-4">
                             <div class="bo4 of-hidden size15 m-b-0">
-                                <input type="text" name="tanggal_acara" id="flatpickr" class="sizefull s-text7 p-l-22 p-r-22" placeholder="Tanggal Acara Resepsi Anda">
+                                <input type="date" name="tanggal_acara" id="flatpickr" class="sizefull s-text7 p-l-22 p-r-22" placeholder="Tanggal Acara Resepsi Anda">
                                 <span class="input-group-text><i class=" fa fa-calendar"></i></span>
                             </div>
                         </div>
@@ -152,7 +152,7 @@
                         <span style="padding-left: 20px"><i class="fa fa-calendar"></i></span>
                         <div class="col-sm-4">
                             <div class="bo4 of-hidden size15 m-b-0">
-                                <input type="text" name="tanggal_selesai_acara" id="flatpickr" class="sizefull s-text7 p-l-22 p-r-22" placeholder="Tanggal Selesai Acara Resepsi Anda">
+                                <input type="date" name="tanggal_selesai_acara" id="flatpickr" class="sizefull s-text7 p-l-22 p-r-22" placeholder="Tanggal Selesai Acara Resepsi Anda">
                                 <span class="input-group-text><i class=" fa fa-calendar"></i></span>
                             </div>
                         </div>

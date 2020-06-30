@@ -42,6 +42,7 @@ if ($this->session->flashdata('success')) {
                 <td>No. Telpon</td><br>
                 <td>Alamat</td><br>
                 <td>Tanggal Acara</td><br>
+                <td>Tanggal Selesai Acara</td><br>
                 <td>Status</td>
             </address>
         </div>
@@ -49,7 +50,8 @@ if ($this->session->flashdata('success')) {
             <td>: <b> <?= $header_transaksi->nama; ?></b></td><br>
             <td>: <?= $header_transaksi->no_telp; ?></td><br>
             <td>: <?= $header_transaksi->alamat; ?></td><br>
-            <td>: <?= $header_transaksi->tanggal_acara; ?></td><br>
+            <td>: <?= date('d-m-Y', strtotime($header_transaksi->tanggal_acara)); ?></td><br>
+            <td>: <?= date('d-m-Y', strtotime($header_transaksi->tanggal_selesai_acara)); ?></td><br>
             <td>:
                 <?php if ($header_transaksi->status_bayar == "lunas") {
                     echo '<span class="badge bg-primary">LUNAS</span>';
@@ -120,7 +122,12 @@ if ($this->session->flashdata('success')) {
         </div>
         <!-- /.col -->
         <div class="col-6">
-            <p class="lead">Tanggal Bayar: <?php echo date('d-m-Y', strtotime($header_transaksi->tanggal_bayar)) ?></p>
+            <p class="lead">Tanggal Bayar: <?php if ($header_transaksi->tanggal_bayar == "") {
+                                                echo 'Belum melakukan pembayaran';
+                                            } else {
+                                                echo date('d-m-Y', strtotime($header_transaksi->tanggal_bayar));
+                                            } ?>
+            </p>
 
             <div class="table-responsive">
                 <table class="table">

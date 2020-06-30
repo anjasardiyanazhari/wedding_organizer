@@ -72,7 +72,7 @@
 
                                 <tr>
                                     <td>Jumlah Harga/Hari</td>
-                                    <td> <?php echo number_format($header_transaksi->jumlah_transaksi) ?></td>
+                                    <td> <?php echo number_format($header_transaksi->jumlah_transaksi, 0, ',', '.') ?></td>
                                 </tr>
 
                                 <tr>
@@ -113,8 +113,8 @@
                                             <td><?php echo $isi->kode_fasilitas ?></td>
                                             <td><?php echo $isi->nama_fasilitas ?></td>
                                             <td style="text-align: center"><?php echo number_format($isi->jumlah) ?></td>
-                                            <td><?php echo number_format($isi->harga) ?></td>
-                                            <td><?php echo number_format($isi->total_harga) ?></td>
+                                            <td><?php echo number_format($isi->harga, 0, ',', '.') ?></td>
+                                            <td><?php echo number_format($isi->total_harga, 0, ',', '.') ?></td>
                                         </tr>
 
                                     <?php

@@ -53,15 +53,20 @@ class Informasi extends CI_Controller
 
 	function load_calendar()
 	{
+
 		$event_data = $this->m_calendar->fetch_all_event();
 		foreach ($event_data->result_array() as $row) {
+
 			$data[] = array(
 				'id' => $row['id_header_transaksi'],
 				'title' => $row['nama'],
 				'start' => $row['tanggal_acara'],
-				'end' => $row['tanggal_selesai_acara']
+				'end' => $row['tanggal_selesai_acara'],
+				'color' => $row['tanggal_warna'],
+
 			);
 		}
+		$data['header_transaksi'] = $this->m_header_transaksi->getAll();
 		echo json_encode($data);
 	}
 }

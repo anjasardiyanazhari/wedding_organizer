@@ -179,6 +179,7 @@ class Pemesanan extends CI_Controller
                 'id_pelanggan'          => $pelanggan->id_pelanggan,
                 'tanggal_acara'         => $this->input->post('tanggal_acara'),
                 'tanggal_selesai_acara' => $this->input->post('tanggal_selesai_acara'),
+                'tanggal_warna'         => '#FFD700',
                 'nama'                  => $this->input->post('nama'),
                 'email'                 => $this->input->post('email'),
                 'no_telp'               => $this->input->post('no_telp'),

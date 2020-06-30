@@ -48,11 +48,11 @@ if ($this->session->flashdata('success')) {
                 <td><?php echo date('d-m-Y', strtotime($isi->tanggal_selesai_acara)) ?></td>
 
                 <?php
-                                            $x  = strtotime($isi->tanggal_acara);
-                                            $y  = strtotime($isi->tanggal_selesai_acara);
-                                            $jmlHari  = abs(($x - $y) / (60 * 60 * 24));
-                                            ?>
-                                            <td style="text-align: center"> <?php echo $jmlHari ?></td>
+                $x  = strtotime($isi->tanggal_acara);
+                $y  = strtotime($isi->tanggal_selesai_acara);
+                $jmlHari  = abs(($x - $y) / (60 * 60 * 24));
+                ?>
+                <td style="text-align: center"> <?php echo $jmlHari ?></td>
 
                 <td><?php echo date('d-m-Y', strtotime($isi->tanggal_checkout)) ?></td>
                 <td>
@@ -65,7 +65,7 @@ if ($this->session->flashdata('success')) {
                 <td><?php echo $isi->total_item ?></td>
                 <td><?php echo number_format($isi->jumlah_transaksi) ?></td>
                 <td><?php echo number_format($isi->jumlah_transaksi * $jmlHari, 0, ',', '.') ?></td>
-               
+
                 <td style="text-align: center">
                     <?php if ($isi->status_bayar == "lunas") {
                         echo '<span class="badge bg-primary">LUNAS</span>';
@@ -89,7 +89,7 @@ if ($this->session->flashdata('success')) {
                     </div>
                     <div class="clearfix"></div><br>
                     <div class="btn-group">
-                        <a href="<?php echo base_url('backend/transaksi/Penyewaan/pdf/' . $isi->kode_transaksi) ?>" class="btn btn-warning btn-xs" target="_blank"><i class="fa fa-file-pdf"></i> Unduh PDF</a>
+                        <a href="<?php echo base_url('backend/transaksi/Penyewaan/pdf/' . $isi->kode_transaksi) ?>" class="btn btn-warning btn-xs" target="_blank"><i class="fa fa-file-word"></i> Unduh Word</a>
                         <?php include('v_delete.php') ?>
                     </div>
                 </td>

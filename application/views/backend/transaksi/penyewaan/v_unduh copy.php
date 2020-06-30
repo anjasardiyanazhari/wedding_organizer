@@ -46,12 +46,6 @@
 <body>
     <div class="kertas">
         <div class="panel-body">
-            <p style="text-align: right">Tanggal Bayar: <?php if ($header_transaksi->tanggal_bayar == "") {
-                                                            echo 'Belum melakukan pembayaran';
-                                                        } else {
-                                                            echo date('d-m-Y', strtotime($header_transaksi->tanggal_bayar));
-                                                        } ?>
-            </p>
             <center>
                 <h3 class="page-header">
                     <h1>TRANSAKSI <?php echo $site->nama_web ?> <br> <small>Kode Transaksi # <i> <?= $header_transaksi->kode_transaksi ?></i></small></h1>
@@ -145,30 +139,7 @@
                     </tr>
                 </tfoot>
             </table>
-        </div>
-        <br>
-        <div class="row">
-            <!-- accepted payments column -->
-            <div class="col-6">
-                <table border="0">
-                    <tbody>
-                        <tr>
-                            <td><strong>Bukti Bayar:</strong></td>
-                            <td> <?php if ($header_transaksi->bukti_bayar == "") {
-                                        echo '<strong>Belum ada bukti pembayaran</strong>';
-                                    } else { ?>
-                        <tr>
-                            <td>
-                                <img src=" <?php echo base_url('assets/backend/img/bukti_bayar/asli/' . $header_transaksi->bukti_bayar) ?>" class="img img-responsive img-thumbnail" width="300">
-                            </td>
-                        </tr>
-                    <?php } ?>
-                    </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- /.col -->
+
         </div>
     </div>
 </body>

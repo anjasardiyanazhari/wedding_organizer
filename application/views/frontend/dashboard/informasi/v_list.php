@@ -79,9 +79,18 @@
                                             <td style="text-align: center"> <?php echo $jmlHari ?></td>
 
                                             <td style="text-align: center"><?php echo $isi->total_item ?></td>
-                                            <td><?php echo number_format($isi->jumlah_transaksi) ?></td>
+                                            <td><?php echo number_format($isi->jumlah_transaksi, 0, ',', '.') ?></td>
                                             <td> <span class="badge bg-primary"><?php echo number_format($isi->jumlah_transaksi * $jmlHari, 0, ',', '.') ?></span></td>
-                                            <td><?php echo $isi->status_bayar ?></td>
+                                            <!-- <td><?php echo $isi->status_bayar ?></td> -->
+                                            <td style="text-align: center">
+                                                <?php if ($isi->status_bayar == "lunas") {
+                                                    echo '<span class="badge bg-primary">LUNAS</span>';
+                                                } elseif ($isi->status_bayar == "konfirmasi") {
+                                                    echo '<span class="badge  bg-danger">MENUNGGU KONFIRMASI <br> PEMBAYARAN</span>';
+                                                } else {
+                                                    echo '<span class="badge bg-warning">BELUM MELAKUKAN <br> PEMBAYARAN</span>';
+                                                } ?>
+                                            </td>
                                             <td>
                                                 <div class="btn-group">
                                                     <?php include('v_delete.php') ?>

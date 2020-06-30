@@ -11,8 +11,7 @@
 				<!-- <i class="ion ion-shopping-cart"></i> -->
 				<i class="fas fa-user"></i>
 			</div>
-			<a href="<?php echo base_url('backend/pengguna/Pegawai'); ?>" class="small-box-footer">More info <i
-						class="fas fa-arrow-circle-right"></i></a>
+			<a href="<?php echo base_url('backend/pengguna/Pegawai'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 		</div>
 	</div>
 	<!-- ./col -->
@@ -28,8 +27,7 @@
 				<!-- <i class="ion ion-shopping-cart"></i> -->
 				<i class="fas fa-users"></i>
 			</div>
-			<a href="<?php echo base_url('backend/pengguna/Pelanggan'); ?>" class="small-box-footer">More info <i
-						class="fas fa-arrow-circle-right"></i></a>
+			<a href="<?php echo base_url('backend/pengguna/Pelanggan'); ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 		</div>
 	</div>
 	<!-- ./col -->
@@ -45,8 +43,7 @@
 				<!-- <i class="ion ion-person-add"></i> -->
 				<i class="fas fa-tags"></i>
 			</div>
-			<a href="<?php echo site_url('backend/data_master/Kategori') ?>" class="small-box-footer">More info <i
-						class="fas fa-arrow-circle-right"></i></a>
+			<a href="<?php echo site_url('backend/data_master/Kategori') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 		</div>
 	</div>
 	<!-- ./col -->
@@ -62,8 +59,7 @@
 				<!-- <i class="ion ion-person-add"></i> -->
 				<i class="fas fa-shopping-bag"></i>
 			</div>
-			<a href="<?php echo site_url('backend/data_master/Fasilitas') ?>" class="small-box-footer">More info <i
-						class="fas fa-arrow-circle-right"></i></a>
+			<a href="<?php echo site_url('backend/data_master/Fasilitas') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 		</div>
 	</div>
 	<!-- ./col -->
@@ -79,8 +75,7 @@
 				<!-- <i class="ion ion-pie-graph"></i> -->
 				<i class="fab fa-cc-mastercard"></i>
 			</div>
-			<a href="<?php echo site_url('backend/data_master/Rekening') ?>" class="small-box-footer">More info <i
-						class="fas fa-arrow-circle-right"></i></a>
+			<a href="<?php echo site_url('backend/data_master/Rekening') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 		</div>
 	</div>
 	<!-- ./col -->
@@ -96,8 +91,7 @@
 				<!-- <i class="ion ion-stats-bars"></i> -->
 				<i class="fas fa-shopping-cart"></i>
 			</div>
-			<a href="<?php echo site_url('backend/transaksi/Penyewaan') ?>" class=" small-box-footer">More info <i
-						class="fas fa-arrow-circle-right"></i></a>
+			<a href="<?php echo site_url('backend/transaksi/Penyewaan') ?>" class=" small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 		</div>
 	</div>
 	<!-- ./col -->
@@ -107,14 +101,13 @@
 			<div class="inner">
 				<h3><?php echo count($total_contact) ?></h3>
 
-				<p>Message</p>
+				<p>Contact Us</p>
 			</div>
 			<div class="icon">
 				<!-- <i class="ion ion-pie-graph"></i> -->
 				<i class="fas fa-comments"></i>
 			</div>
-			<a href="<?php echo base_url('backend/buku/Contact') ?>" class="small-box-footer">More info <i
-						class="fas fa-arrow-circle-right"></i></a>
+			<a href="<?php echo base_url('backend/buku/Contact') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 		</div>
 	</div>
 	<!-- ./col -->
@@ -130,8 +123,7 @@
 				<!-- <i class="ion ion-pie-graph"></i> -->
 				<i class="fas fa-images"></i>
 			</div>
-			<a href="<?php echo base_url('backend/dokumentasi/Galleri') ?>" class="small-box-footer">More info <i
-						class="fas fa-arrow-circle-right"></i></a>
+			<a href="<?php echo base_url('backend/dokumentasi/Galleri') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
 		</div>
 	</div>
 </div> <br>
@@ -148,8 +140,8 @@
 					<!-- the events -->
 					<div id="external-events">
 						<div class="external-event bg-primary">Lunas</div>
-						<div class="external-event bg-danger">Menunggu Konfirmasi</div>
-						<div class="external-event bg-warning">Menunggu Pembayaran</div>
+						<div class="external-event bg-danger"> Konfirmasi</div>
+						<div class="external-event bg-warning">Pending</div>
 					</div>
 				</div>
 			</div>

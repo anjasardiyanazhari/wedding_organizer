@@ -29,7 +29,7 @@
                 <!-- Product -->
                 <div class="body">
 
-                    <p>Berikut Adalah Konfirmasi Belanja Anda</p>
+                    <p>Berikut Adalah Konfirmasi Pembayaran Anda</p>
 
                     <?php
 
@@ -74,7 +74,7 @@
 
                                 <tr>
                                     <td>Jumlah Harga/Hari</td>
-                                    <td> <?php echo number_format($header_transaksi->jumlah_transaksi) ?></td>
+                                    <td> <?php echo number_format($header_transaksi->jumlah_transaksi, 0, ',', '.') ?></td>
                                 </tr>
 
                                 <tr>
@@ -157,9 +157,11 @@
                                         <div class="bo4 of-hidden size15 m-b-0">
                                             <input type="text" class="sizefull s-text7 p-l-22 p-r-22" name="jumlah_bayar" id="jumlah_bayar" placeholder="Jumlah Pembayaran" value="<?php if (isset($_POST['jumlah_bayar'])) {
                                                                                                                                                                                         echo set_value('jumlah_bayar');
+                                                                                                                                                                                    } elseif ($header_transaksi->jumlah_bayar != "") {
+                                                                                                                                                                                        // echo $header_transaksi->jumlah_bayar;
+                                                                                                                                                                                        echo $header_transaksi->jumlah_bayar;
                                                                                                                                                                                     } else {
                                                                                                                                                                                         echo $header_transaksi->jumlah_bayar;
-                                                                                                                                                                                        // echo number_format($header_transaksi->jumlah_bayar, '0', ',', '.');
                                                                                                                                                                                     } ?>">
                                         </div>
                                     </div>
@@ -278,7 +280,7 @@
                                     </div>
                                 </div>
                             </form>
-                                                                                                                                                                                                
+
                         </div>
 
                     <?php
