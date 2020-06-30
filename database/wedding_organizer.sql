@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2020 at 05:01 AM
+-- Generation Time: Jun 30, 2020 at 03:15 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -32,20 +32,21 @@ CREATE TABLE `tbl_contact` (
   `id_contact` int(11) NOT NULL,
   `nama` varchar(20) NOT NULL,
   `email` varchar(225) NOT NULL,
-  `message` varchar(225) NOT NULL
+  `message` varchar(225) NOT NULL,
+  `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_contact`
 --
 
-INSERT INTO `tbl_contact` (`id_contact`, `nama`, `email`, `message`) VALUES
-(15, 'Saripudin Ambara', 'saripudinambara@gmail.com', 'sangat membantu'),
-(16, 'Abi Rezardi', 'abirezardi@gmail.com', 'membantu sekali'),
-(23, 'Anjas Ardiyan Azhari', 'anjas@gmail.com', 'a'),
-(24, 'Anjas Ardiyan Azhari', 'anjas@gmail.com', 'anjas'),
-(25, 'Abi Rezardi', 'abirezardi@gmail.com', 'abi'),
-(26, 'Abi Rezardi', 'abirezardi@gmail.com', 'tes');
+INSERT INTO `tbl_contact` (`id_contact`, `nama`, `email`, `message`, `tanggal_update`) VALUES
+(15, 'Saripudin Ambara', 'saripudinambara@gmail.com', 'sangat membantu', '2020-06-24 23:54:44'),
+(16, 'Abi Rezardi', 'abirezardi@gmail.com', 'membantu sekali', '2020-06-24 23:54:44'),
+(23, 'Anjas Ardiyan Azhari', 'anjas@gmail.com', 'a', '2020-06-24 23:54:44'),
+(24, 'Anjas Ardiyan Azhari', 'anjas@gmail.com', 'anjas', '2020-06-24 23:54:44'),
+(25, 'Abi Rezardi', 'abirezardi@gmail.com', 'abi', '2020-06-24 23:54:44'),
+(26, 'Abi Rezardi', 'abirezardi@gmail.com', 'tes', '2020-06-24 23:54:44');
 
 -- --------------------------------------------------------
 
@@ -198,8 +199,9 @@ INSERT INTO `tbl_galleri` (`id_galleri`, `judul_foto`, `foto`, `tanggal_post`, `
 CREATE TABLE `tbl_header_transaksi` (
   `id_header_transaksi` int(11) NOT NULL,
   `id_pelanggan` int(11) DEFAULT NULL,
-  `tanggal_acara` varchar(255) NOT NULL,
-  `tanggal_selesai_acara` varchar(255) NOT NULL,
+  `tanggal_acara` date NOT NULL,
+  `tanggal_selesai_acara` date NOT NULL,
+  `tanggal_warna` varchar(255) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `no_telp` varchar(14) NOT NULL,
@@ -213,7 +215,7 @@ CREATE TABLE `tbl_header_transaksi` (
   `rekening_pelanggan` varchar(255) NOT NULL,
   `bukti_bayar` varchar(255) NOT NULL,
   `id_rekening` int(11) NOT NULL,
-  `tanggal_bayar` varchar(255) NOT NULL,
+  `tanggal_bayar` date NOT NULL,
   `nama_bank` varchar(255) NOT NULL,
   `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -222,8 +224,9 @@ CREATE TABLE `tbl_header_transaksi` (
 -- Dumping data for table `tbl_header_transaksi`
 --
 
-INSERT INTO `tbl_header_transaksi` (`id_header_transaksi`, `id_pelanggan`, `tanggal_acara`, `tanggal_selesai_acara`, `nama`, `email`, `no_telp`, `alamat`, `kode_transaksi`, `tanggal_checkout`, `jumlah_transaksi`, `status_bayar`, `jumlah_bayar`, `rekening_pembayaran`, `rekening_pelanggan`, `bukti_bayar`, `id_rekening`, `tanggal_bayar`, `nama_bank`, `tanggal_update`) VALUES
-(21, 3, '18-06-2020', '19-06-2020', 'Abi Rezardi', 'abirezardi@gmail.com', '081937037100', 'Lotim', '04062020NXLHTAKDYFDSPC1G', '2020-06-04 01:47:08', 4545, 'panding', '', '', '', '', 0, '', '', '2020-06-03 23:47:22');
+INSERT INTO `tbl_header_transaksi` (`id_header_transaksi`, `id_pelanggan`, `tanggal_acara`, `tanggal_selesai_acara`, `tanggal_warna`, `nama`, `email`, `no_telp`, `alamat`, `kode_transaksi`, `tanggal_checkout`, `jumlah_transaksi`, `status_bayar`, `jumlah_bayar`, `rekening_pembayaran`, `rekening_pelanggan`, `bukti_bayar`, `id_rekening`, `tanggal_bayar`, `nama_bank`, `tanggal_update`) VALUES
+(50, 3, '2020-06-22', '2020-06-30', '#0071c5', 'Abi Rezardi', 'abirezardi@gmail.com', '081937037100', 'Lotim', '08062020EOVYGRN16MDFBJON', '2020-06-08 14:37:23', 13635, 'konfirmasi', '10,000,000', '101203', 'Saep', 'WIN_20181117_17_09_36_Pro.jpg', 1, '0000-00-00', 'Bank Indonesia (BI)', '2020-06-24 08:29:58'),
+(52, 5, '2020-07-01', '2020-07-05', '#FFD700', 'Ahli Madya', 'ahlimadya@gmail.com', '081937037105', 'UBG Mataram', '24062020IAE9CXWPVO4RYNE1', '2020-06-24 09:09:39', 500000, 'panding', '', '', '', '', 0, '0000-00-00', '', '2020-06-24 07:09:50');
 
 -- --------------------------------------------------------
 
@@ -280,7 +283,6 @@ CREATE TABLE `tbl_konfigurasi` (
   `deskripsi` text,
   `logo` varchar(255) DEFAULT NULL,
   `icon` varchar(255) DEFAULT NULL,
-  `icon_administrator` varchar(255) DEFAULT NULL,
   `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -288,8 +290,8 @@ CREATE TABLE `tbl_konfigurasi` (
 -- Dumping data for table `tbl_konfigurasi`
 --
 
-INSERT INTO `tbl_konfigurasi` (`id_konfigurasi`, `nama_web`, `tag_line`, `email`, `link_website`, `no_telp`, `alamat`, `google_maps`, `facebook`, `instagram`, `twitter`, `keyword`, `deskripsi`, `logo`, `icon`, `icon_administrator`, `tanggal_update`) VALUES
-(1, 'GOLDEN CARE', 'Make Good Preweding', 'goldencare@gmail.com', 'goldencare.com', '0819370371051', 'Jln.Medain Mataram, Lombok, NTB', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.4322305215937!2d116.10266288519284!3d-8.5850356556437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc09df2b0eda1%3A0xf72a931b27e2c30b!2sGOLDEN%20CARE%20SALON%20%26%20WO!5e0!3m2!1sid!2sid!4v1584370635238!5m2!1sid!2sid', '@fb_GoldenCare', '@ig_GoldenCare', '@twitter_GoldenCare', 'wedding, Pernikahan', 'wedding organizer', 'icon.png', 'icon.png', '', '2020-05-18 05:10:13');
+INSERT INTO `tbl_konfigurasi` (`id_konfigurasi`, `nama_web`, `tag_line`, `email`, `link_website`, `no_telp`, `alamat`, `google_maps`, `facebook`, `instagram`, `twitter`, `keyword`, `deskripsi`, `logo`, `icon`, `tanggal_update`) VALUES
+(1, 'GOLDEN CARE', 'Make Good Preweding', 'goldencare@gmail.com', 'goldencare.com', '0819370371051', 'Jln.Medain Mataram, Lombok, NTB', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.4322305215937!2d116.10266288519284!3d-8.5850356556437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc09df2b0eda1%3A0xf72a931b27e2c30b!2sGOLDEN%20CARE%20SALON%20%26%20WO!5e0!3m2!1sid!2sid!4v1584370635238!5m2!1sid!2sid', '@fb_GoldenCare', '@ig_GoldenCare', '@twitter_GoldenCare', 'wedding, Pernikahan', 'wedding organizer', 'icon.png', 'icon.png', '2020-05-18 05:10:13');
 
 -- --------------------------------------------------------
 
@@ -339,8 +341,9 @@ CREATE TABLE `tbl_pelanggan` (
 --
 
 INSERT INTO `tbl_pelanggan` (`id_pelanggan`, `status`, `nama`, `email`, `password`, `no_telp`, `alamat`, `tanggal_registrasi`, `tanggal_update`) VALUES
-(3, 'Pending', 'Abi Rezardi', 'abirezardi@gmail.com', 'f35be6b71e94a23005e798f30799c4020bd2fdd0', '081937037100', 'Lotim', '2020-05-17 06:56:29', '2020-06-03 10:05:31'),
-(4, 'Pending', 'Saripudin Ambara', 'saripudinambara@gmail.com', '990565651cd7ee7fad1ea27455fc486fce85d81b', '081937137260', 'Loteng', '2020-05-17 06:59:34', '2020-05-17 04:59:34');
+(3, 'Pending', 'abi', 'abirezardi@gmail.com', 'f35be6b71e94a23005e798f30799c4020bd2fdd0', '081937037100', 'Lotim', '2020-05-17 06:56:29', '2020-06-24 07:44:22'),
+(4, 'Pending', 'Saripudin Ambara', 'saripudinambara@gmail.com', '990565651cd7ee7fad1ea27455fc486fce85d81b', '081937137260', 'Loteng', '2020-05-17 06:59:34', '2020-05-17 04:59:34'),
+(5, 'Pending', 'Ahli Madya', 'ahlimadya@gmail.com', '20652032c9f2a65b3d47c41b36ba67068606acce', '081937037105', 'UBG Mataram', '2020-06-24 09:01:36', '2020-06-24 07:01:36');
 
 -- --------------------------------------------------------
 
@@ -388,7 +391,8 @@ CREATE TABLE `tbl_transaksi` (
 --
 
 INSERT INTO `tbl_transaksi` (`id_transaksi`, `id_header_transaksi`, `id_pelanggan`, `kode_transaksi`, `tanggal_checkout`, `id_fasilitas`, `harga`, `jumlah`, `total_harga`, `tanggal_update`) VALUES
-(22, 0, 3, '04062020NXLHTAKDYFDSPC1G', '2020-06-04 01:47:08', 78, 4545, 1, 4545, '2020-06-03 23:47:22');
+(35, 0, 3, '08062020EOVYGRN16MDFBJON', '2020-06-08 14:37:23', 78, 4545, 3, 13635, '2020-06-08 12:37:47'),
+(37, 0, 5, '24062020IAE9CXWPVO4RYNE1', '2020-06-24 09:09:39', 41, 500000, 1, 500000, '2020-06-24 07:09:50');
 
 --
 -- Indexes for dumped tables
@@ -497,7 +501,7 @@ ALTER TABLE `tbl_galleri`
 -- AUTO_INCREMENT for table `tbl_header_transaksi`
 --
 ALTER TABLE `tbl_header_transaksi`
-  MODIFY `id_header_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_header_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `tbl_kategori`
@@ -521,7 +525,7 @@ ALTER TABLE `tbl_pegawai`
 -- AUTO_INCREMENT for table `tbl_pelanggan`
 --
 ALTER TABLE `tbl_pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_rekening`
@@ -533,7 +537,7 @@ ALTER TABLE `tbl_rekening`
 -- AUTO_INCREMENT for table `tbl_transaksi`
 --
 ALTER TABLE `tbl_transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- Constraints for dumped tables
