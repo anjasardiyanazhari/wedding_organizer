@@ -89,7 +89,7 @@ if ($this->session->flashdata('success')) {
                     </div>
                     <div class="clearfix"></div><br>
                     <div class="btn-group">
-                        <a href="<?php echo base_url('backend/transaksi/Penyewaan/pdf/' . $isi->kode_transaksi) ?>" class="btn btn-warning btn-xs" target="_blank"><i class="fa fa-file-word"></i> Unduh Word</a>
+                        <a href="<?php echo base_url('backend/transaksi/Penyewaan/word/' . $isi->kode_transaksi) ?>" class="btn btn-info btn-xs"><i class="fa fa-file-word"></i> Unduh Word</a>
                         <?php include('v_delete.php') ?>
                     </div>
                 </td>
