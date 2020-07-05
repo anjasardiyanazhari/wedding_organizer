@@ -66,7 +66,7 @@ class Informasi extends CI_Controller
 
 			);
 		}
-		$data['header_transaksi'] = $this->m_header_transaksi->getAll();
+		// $data['header_transaksi'] = $this->m_header_transaksi->getAll();
 		echo json_encode($data);
 	}
 }

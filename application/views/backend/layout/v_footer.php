@@ -70,13 +70,15 @@
             right: 'month,agendaWeek,agendaDay'
         },
         events: "<?php echo base_url(); ?>backend/dashboard/informasi/load_calendar",
-        eventColor: '#00FF00',
+        // eventColor: '#00FF00',
         selectable: true,
         selectHelper: true,
         editable: false,
         eventClick: function(event) {
             var id = event.id;
-            window.location.href = "<?php echo base_url('backend/transaksi/Penyewaan/' . $header_transaksi->kode_transaksi); ?>";
+            window.location.href = "<?php echo base_url(); ?>backend/transaksi/Penyewaan/";
+
+
         }
     });
 </script>

@@ -107,7 +107,7 @@ if ($this->session->flashdata('success')) {
             <td>: <?php if ($header_transaksi->jumlah_bayar == "") {
                         echo 'Belum melakukan pembayaran';
                     } else {
-                        echo number_format($header_transaksi->jumlah_bayar, '0', ',', '.');
+                        echo $header_transaksi->jumlah_bayar;
                     } ?>
             </td>
         </tr>

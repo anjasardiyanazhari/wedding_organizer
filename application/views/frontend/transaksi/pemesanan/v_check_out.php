@@ -204,7 +204,8 @@
                     <div class="form-group row">
                         <label class="col-sm-3 col-form-label"></label>
                         <div class="col-sm-9">
-                            <button type="submit" class="btn btn-primary" name="submit"><i class="fa fa-save"></i> Check Out Sekarang</button>
+                            <a href="https://api.whatsapp.com/send?phone=+<?php echo $site->no_telp ?>&text=Kode Transaksi=<?php echo $kode_transaksi; ?>, Nama Penyewa=<?php echo $pelanggan->nama; ?>" target="_blank">
+                                <button type="submit" class="btn btn-primary" name="submit"><i class="fa fa-save"></i> Check Out Sekarang</button></a>
                             <button type="reset" class="btn btn-danger" name="reset"><i class="fa fa-times"></i> Reset</button>
                         </div>
                     </div>
@@ -217,6 +218,6 @@
             <div class="flex-w flex-m w-full-sm">
             </div>
         </div>
-
     </div>
+
 </section>

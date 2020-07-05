@@ -158,7 +158,6 @@
                                             <input type="text" class="sizefull s-text7 p-l-22 p-r-22" name="jumlah_bayar" id="jumlah_bayar" placeholder="Jumlah Pembayaran" value="<?php if (isset($_POST['jumlah_bayar'])) {
                                                                                                                                                                                         echo set_value('jumlah_bayar');
                                                                                                                                                                                     } elseif ($header_transaksi->jumlah_bayar != "") {
-                                                                                                                                                                                        // echo $header_transaksi->jumlah_bayar;
                                                                                                                                                                                         echo $header_transaksi->jumlah_bayar;
                                                                                                                                                                                     } else {
                                                                                                                                                                                         echo $header_transaksi->jumlah_bayar;
@@ -298,3 +297,8 @@
         </div>
     </div>
 </section>
+
+<!-- 
+<div>
+    <a href="https://api.whatsapp.com/send?phone=+<?php echo $site->no_telp ?>&text=Kode Transaksi=<?php echo $kode_transaksi; ?>" target="_blank"> </a>
+</div> -->
