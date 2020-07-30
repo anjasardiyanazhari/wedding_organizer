@@ -183,32 +183,6 @@ class Penyewaan extends CI_Controller
         $mpdf->Output($nama_file_pdf, 'I');
     }
 
-    // Halaman Print
-    public function word($kode_transaksi)
-    {
-        $header_transaksi = $this->m_header_transaksi->getKode_transaksi($kode_transaksi);
-        $transaksi = $this->m_transaksi->getKode_transaksi($kode_transaksi);
-
-        $site = $this->m_konfigurasi->getAll();
-        $data = array(
-            'title'                 => 'Print Transaksi',
-            'sub_title'             => 'PRINT TRANSAKSI',
-            'sub_header'            => 'Golden Care',
-            'site'                  => $site,
-            'header_transaksi'      => $header_transaksi,
-            'transaksi'             => $transaksi,
-            'halaman'               => 'backend/transaksi/penyewaan/v_word',
-        );
-        // Ambil Data Konfigurasi Untuk Menampilkan Isi Setting icon
-        $data['site'] = $this->m_konfigurasi->getAll();
-
-        // Menampilkan Jumlah Total Data ke Sidebar
-        $data['total_pelanggan'] = $this->m_pelanggan->getAll();
-        $data['total_header_transaksi'] = $this->m_header_transaksi->getAll();
-        $data['total_contact'] = $this->m_contact->getAll();
-        $this->load->view('backend/layout/v_wrapper', $data);
-    }
-
     // Delete Data Transaksi
     public function delete($kode_transaksi)
     {
