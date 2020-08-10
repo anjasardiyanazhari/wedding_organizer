@@ -79,18 +79,25 @@
 </footer>
 
 <!--===============================================================================================-->
-<div style="position:fixed;right:20px;bottom:20px;">
+<!-- <div style="position:fixed;right:20px;bottom:20px;">
     <a href="https://api.whatsapp.com/send?phone=+<?php echo $site->no_telp ?>&text=Hallo, Saya ingin konsultasi jasa wedding organizer Golden Care" target="_blank">
         <button style="background:#32C03C; color: white; vertical-align:center;height:40px;width:200px; border-radius:5px" ;>
             <img src="<?php echo base_url() ?>assets/backend/img/home/app.png" style="font-family: Arial, Helvetica, sans-serif"> WhatsApp Kami
         </button>
     </a>
-</div>
+</div> -->
 
 
 <!-- Back to top -->
-<div class="btn-back-to-top bg0-hov" id="myBtn" style="position:fixed;right:20px;bottom:70px;">
+<!-- <div class="btn-back-to-top bg0-hov" id="myBtn" style="position:fixed;right:20px;bottom:70px;">
     <span class=" symbol-btn-back-to-top">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </span>
+</div> -->
+
+<!-- Back to top -->
+<div class="btn-back-to-top bg0-hov" id="myBtn">
+    <span class="symbol-btn-back-to-top">
         <i class="fa fa-angle-double-up" aria-hidden="true"></i>
     </span>
 </div>
@@ -109,7 +116,11 @@
     flatpickr('#flatpickr', {
         minDate: someDate,
         enebleTime: true,
-        dateFormat: 'Y-m-d H:i:s',
+        dateFormat: 'Y-m-d',
+    });
+    flatpickr('#flatpickr2', {
+        enebleTime: true,
+        dateFormat: 'Y-m-d',
     });
 </script>
 

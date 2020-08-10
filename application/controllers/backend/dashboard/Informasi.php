@@ -63,7 +63,6 @@ class Informasi extends CI_Controller
 				'start' => $row['tanggal_acara'],
 				'end' => $row['tanggal_selesai_acara'],
 				'color' => $row['tanggal_warna'],
-
 			);
 		}
 		// $data['header_transaksi'] = $this->m_header_transaksi->getAll();

@@ -7,29 +7,20 @@
         </div>
 
 
-        <div class="row ftco-animate">
-            <div class="col-md-12">
-                <div class="carousel-testimony owl-carousel ftco-owl">
-
-                    <?php
-                    foreach ($galleri as $galleri) :
-                    ?>
-                        <div class="item">
-                            <?php form_hidden($galleri->id_galleri); ?>
-                            <a href="<?php echo base_url('assets/backend/img/dokumentasi/galleri/asli/' . $galleri->foto) ?>" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url('<?php echo base_url('assets/backend/img/dokumentasi/galleri/thumbnail/' . $galleri->foto) ?>');">
-                                <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
-                            </a>
-                            <h5 style="text-align: center">
-                                <?php echo $galleri->judul_foto ?>
-                            </h5>
-                        </div>
-
-                    <?php
-                    endforeach;
-                    ?>
+        <div class="row">
+            <?php
+            foreach ($galleri as $galleri) :
+            ?>
+                <div class="col-md-3 ftco-animate">
+                    <?php form_hidden($galleri->id_galleri); ?>
+                    <a href="<?php echo base_url('assets/backend/img/dokumentasi/galleri/asli/' . $galleri->foto) ?>" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url('<?php echo base_url('assets/backend/img/dokumentasi/galleri/thumbnail/' . $galleri->foto) ?>');">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+                    </a>
 
                 </div>
-            </div>
+            <?php
+            endforeach;
+            ?>
         </div>
-    </div>
+
 </section>

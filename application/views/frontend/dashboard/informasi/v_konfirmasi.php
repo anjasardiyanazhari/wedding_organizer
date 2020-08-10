@@ -140,9 +140,11 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div class="bo4 of-hidden size15 m-b-0">
-                                            <input type="text" class="sizefull s-text7 p-l-22 p-r-22" name="tanggal_bayar" id="tanggal_bayar" placeholder="dd-mm-yyyy" value="<?php if (isset($_POST['tanggal_bayar'])) {
+                                            <input type="date" class="sizefull s-text7 p-l-22 p-r-22" name="tanggal_bayar" id="flatpickr2" placeholder="Tanggal Melakukan Pembayaran" value="<?php if(isset($_POST['tanggal_bayar'])) {
                                                                                                                                                                                     echo set_value('tanggal_bayar');
-                                                                                                                                                                                } else {
+                                                                                                                                                                                } elseif ($header_transaksi->tanggal_bayar != "") {
+                                                                                                                                                                                    echo $header_transaksi->tanggal_bayar;
+                                                                                                                                                                                 } else {
                                                                                                                                                                                     echo date('d-m-Y');
                                                                                                                                                                                 } ?>">
                                         </div>
@@ -297,8 +299,3 @@
         </div>
     </div>
 </section>
-
-<!-- 
-<div>
-    <a href="https://api.whatsapp.com/send?phone=+<?php echo $site->no_telp ?>&text=Kode Transaksi=<?php echo $kode_transaksi; ?>" target="_blank"> </a>
-</div> -->

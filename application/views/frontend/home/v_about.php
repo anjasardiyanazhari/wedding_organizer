@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center d-flex align-items-stretch">
                         <div class="bride-groom ftco-animate">
-                            <div class="img" style="background-image: url('<?php echo base_url() ?>assets/backend/img/user/bride.jpg');"></div>
+                            <div class="img" style="background-image: url('<?php echo base_url() ?>assets/backend/img/user/nikadek.jpg');"></div>
                             <div class="text mt-4 px-4">
                                 <h2>I Kadek</h2>
                                 <p>
