@@ -32,6 +32,15 @@
                     <p>Berikut Adalah Konfirmasi Pembayaran Anda</p>
 
                     <?php
+                    // Success Upload
+                    if ($this->session->flashdata('success')) {
+                        echo "<div class='alert alert-success'>" . $this->session->flashdata('success') . "</div>";
+                    }
+
+                    // Notifikasi error
+                    echo validation_errors('<p class="alert alert-warning">', '</p>'); ?>
+
+                    <?php
 
                     // Kalau Ada transaksi, Tampilkan Table
                     if ($header_transaksi) { ?>
@@ -98,16 +107,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <br>
 
                         <?php
-                        // Error Upload
-                        if ($this->session->flashdata('success')) {
-                            echo "<div class='alert alert-success'>" . $this->session->flashdata('success') . "</div>";
-                        }
-
-                        // Notifikasi error
-                        echo validation_errors('<p class="alert alert-warning">', '</p>');
 
                         // Form Open
                         echo form_open_multipart(base_url('frontend/dashboard/Informasi/konfirmasi/' . $header_transaksi->kode_transaksi));
@@ -140,13 +141,13 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div class="bo4 of-hidden size15 m-b-0">
-                                            <input type="date" class="sizefull s-text7 p-l-22 p-r-22" name="tanggal_bayar" id="flatpickr2" placeholder="Tanggal Melakukan Pembayaran" value="<?php if(isset($_POST['tanggal_bayar'])) {
-                                                                                                                                                                                    echo set_value('tanggal_bayar');
-                                                                                                                                                                                } elseif ($header_transaksi->tanggal_bayar != "") {
-                                                                                                                                                                                    echo $header_transaksi->tanggal_bayar;
-                                                                                                                                                                                 } else {
-                                                                                                                                                                                    echo date('d-m-Y');
-                                                                                                                                                                                } ?>">
+                                            <input type="date" class="sizefull s-text7 p-l-22 p-r-22" name="tanggal_bayar" id="flatpickr2" placeholder="Tanggal Melakukan Pembayaran" value="<?php if (isset($_POST['tanggal_bayar'])) {
+                                                                                                                                                                                                    echo set_value('tanggal_bayar');
+                                                                                                                                                                                                } elseif ($header_transaksi->tanggal_bayar != "") {
+                                                                                                                                                                                                    echo $header_transaksi->tanggal_bayar;
+                                                                                                                                                                                                } else {
+                                                                                                                                                                                                    echo date('d-m-Y');
+                                                                                                                                                                                                } ?>">
                                         </div>
                                     </div>
                                 </div>

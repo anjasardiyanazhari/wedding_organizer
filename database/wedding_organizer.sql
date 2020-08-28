@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2020 at 03:15 AM
+-- Generation Time: Aug 28, 2020 at 03:41 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -42,11 +42,7 @@ CREATE TABLE `tbl_contact` (
 
 INSERT INTO `tbl_contact` (`id_contact`, `nama`, `email`, `message`, `tanggal_update`) VALUES
 (15, 'Saripudin Ambara', 'saripudinambara@gmail.com', 'sangat membantu', '2020-06-24 23:54:44'),
-(16, 'Abi Rezardi', 'abirezardi@gmail.com', 'membantu sekali', '2020-06-24 23:54:44'),
-(23, 'Anjas Ardiyan Azhari', 'anjas@gmail.com', 'a', '2020-06-24 23:54:44'),
-(24, 'Anjas Ardiyan Azhari', 'anjas@gmail.com', 'anjas', '2020-06-24 23:54:44'),
-(25, 'Abi Rezardi', 'abirezardi@gmail.com', 'abi', '2020-06-24 23:54:44'),
-(26, 'Abi Rezardi', 'abirezardi@gmail.com', 'tes', '2020-06-24 23:54:44');
+(16, 'Abi Rezardi', 'abirezardi@gmail.com', 'membantu sekali', '2020-06-24 23:54:44');
 
 -- --------------------------------------------------------
 
@@ -74,68 +70,19 @@ CREATE TABLE `tbl_fasilitas` (
 --
 
 INSERT INTO `tbl_fasilitas` (`id_fasilitas`, `id_pegawai`, `id_kategori`, `kode_fasilitas`, `nama_fasilitas`, `slug_fasilitas`, `harga`, `deskripsi`, `status_fasilitas`, `foto`, `tanggal_post`, `tanggal_update`) VALUES
-(7, 29, 9, '1', 'Hotel Madani', '1', 1000000, 'Gedung A', 'Draft', '7c341fdca3b412c2dd90ba3a91678cd1-10.jpg', '2020-04-08 07:24:03', '2020-05-17 05:10:57'),
-(16, 29, 9, 'dsd', 'Hotel Aston ', 'dsd', 1000000, 'Gedung C', 'Publish', 'dekorasi-pernikahan-bandung-murah-dan-bagus-1.jpg', '2020-05-16 17:20:34', '2020-05-17 05:11:18'),
-(18, 29, 16, '2', 'Avanza', '2', 1000000, 'Tahun 2015', 'Publish', 'avanza-silver1.jpg', '2020-05-17 07:12:08', '2020-05-17 05:16:14'),
-(19, 29, 9, '122', 'Hotel Aston ', '122', 1000000, 'a', 'Publish', 'f99206e9bf244876ea191a33a3010ca8.jpg', '2020-05-18 07:17:30', '2020-05-18 05:17:56'),
-(20, 29, 9, '22s', 'Hotel Manjawa', '22s', 2, 'sd', 'Publish', 'paket-dekorasi-modern-di-bandung-11.jpg', '2020-05-18 07:18:32', '2020-05-18 05:18:32'),
-(21, 29, 9, '1241', 'Hotel Madani', '1241', 3, '3', 'Publish', 'paket-dekorasi-wedding-harga-murah-di-bandung-13.jpg', '2020-05-18 07:18:56', '2020-05-18 05:18:56'),
-(22, 29, 9, '341', 'Hotel Aston ', '341', 343, '343', 'Publish', 'dekorasi-pernikahan-mewah-dan-murah-di-bandung-2.jpg', '2020-05-18 07:19:34', '2020-05-18 05:19:34'),
-(23, 29, 9, '22424', 'Hotel Aston ', '22424', 24, '24', 'Publish', 'paket-dekorasi-wedding-murah-bandung-3.jpg', '2020-05-18 07:20:00', '2020-05-18 05:20:00'),
-(24, 29, 9, 'afdafe', 'Hotel Manjawa', 'afdafe', 45, 'rr3', 'Publish', 'paket-dekorasi-rustic-murah-di-bandung-9.jpg', '2020-05-18 07:20:29', '2020-05-18 05:20:29'),
-(25, 29, 9, '243242', 'Hotel Madani', '243242', 24234, '2432', 'Publish', 'kif_7242.jpg', '2020-05-18 07:20:47', '2020-05-18 05:20:47'),
-(26, 29, 9, '23235', 'Hotel Manjawa', '23235', 24324, '24234', 'Publish', '389f9138102545f066184e52adbeba6e.jpg', '2020-05-18 07:21:24', '2020-05-18 05:21:24'),
-(27, 29, 9, '3424', 'Hotel Manjawa', '3424', 2434, '243', 'Publish', 'maxresdefault.jpg', '2020-05-18 07:21:52', '2020-05-18 05:21:52'),
-(28, 29, 9, 'aaaqe', 'Hotel Aston ', 'aaaqe', 343, '434', 'Publish', 'dekorasi_pernikahan_q.jpg', '2020-05-18 07:22:17', '2020-05-18 05:22:17'),
-(29, 29, 9, 'gsg', 'Hotel Manjawa', 'gsg', 2432, 'sds', 'Publish', 'Kado_istimewa_PTIK.jpg', '2020-05-18 07:23:26', '2020-05-18 05:23:26'),
-(30, 29, 9, 'gfhd', 'Hotel Manjawa', 'gfhd', 55, '55', 'Publish', 'dekor5.jpg', '2020-05-18 07:23:43', '2020-05-18 05:23:43'),
-(31, 29, 9, 'wgsdg', 'Hotel Manjawa', 'wgsdg', 454, '454', 'Publish', '16554_404017746381433_1820383201_n.jpg', '2020-05-18 07:24:04', '2020-05-18 05:24:04'),
-(32, 29, 9, '45qr', 'Hotel Manjawa', '45qr', 454, '454', 'Publish', 'PF_decoration_zqsghc.jpg', '2020-05-18 07:24:24', '2020-05-18 05:24:24'),
-(33, 29, 9, '45qrbgff', 'Hotel Manjawa', '45qrbgff', 454, '454', 'Publish', 'PF_decoration_zqsghc1.jpg', '2020-05-18 07:24:44', '2020-05-18 05:24:44'),
-(34, 29, 16, 'Daihatsu-Ayla', 'Daihatsu-Ayla', 'daihatsu-ayla', 500000, 'Daihatsu-Ayla', 'Publish', '2017-Daihatsu-Ayla-5.jpg', '2020-05-18 07:28:28', '2020-05-23 15:38:05'),
-(35, 29, 16, 'brio', 'brio', 'brio', 500000, 'brio', 'Publish', '2019-honda-brio-unveiled-main.jpg', '2020-05-18 07:30:20', '2020-05-23 15:37:06'),
-(36, 29, 16, 'mitsubishi xpander cross', 'mitsubishi xpander cross', 'mitsubishi-xpander-cross', 1000000, 'mitsubishi xpander cross', 'Publish', '2020-mitsubishi-xpander-cross.jpg', '2020-05-18 07:35:46', '2020-05-23 15:36:39'),
-(37, 29, 16, 'sigra_daihatsu sigra ', 'sigra_daihatsu sigra ', 'sigra_daihatsu-sigra', 1000000, 'sigra_daihatsu sigra ', 'Publish', 'sigra_daihatsu_sigra_2020_.jpg', '2020-05-18 07:36:53', '2020-05-23 15:36:06'),
-(38, 29, 16, 'toyota alphard', 'toyota alphard', 'toyota-alphard', 1500000, 'toyota alphard', 'Publish', 'toyota_alphard.png', '2020-05-18 07:41:26', '2020-05-23 15:41:04'),
-(39, 29, 16, 'Daihatsu Terios', 'Daihatsu Terios', 'daihatsu-terios', 1000000, 'Daihatsu Terios', 'Publish', 'Daihatsu_Terios.png', '2020-05-18 07:42:16', '2020-05-23 15:40:47'),
-(40, 29, 9, 'suzuki Ertiga', 'suzuki Ertiga', 'suzuki-ertiga', 1000000, 'suzuki Ertiga', 'Publish', 'suzukiertiga-prod-var.png', '2020-05-18 07:44:58', '2020-05-23 15:40:29'),
-(41, 29, 16, 'Honda CR-V', 'Honda CR-V', 'honda-cr-v', 500000, 'Honda CR-V', 'Publish', 'Honda_CR-V.png', '2020-05-18 07:46:39', '2020-05-23 15:40:07'),
-(42, 29, 16, 'Mitsubishi Pajero Sport', 'Mitsubishi Pajero Sport', 'mitsubishi-pajero-sport', 1000000, 'Mitsubishi Pajero Sport', 'Publish', 'Mitsubishi_Pajero_Sport.png', '2020-05-18 07:47:54', '2020-05-23 15:39:47'),
-(43, 29, 16, 'Grand_New_Xenia', 'Grand_New_Xenia', 'grand_new_xenia', 1000000, 'Grand_New_Xenia', 'Publish', 'Grand_New_Xenia.png', '2020-05-18 07:49:12', '2020-05-23 15:39:22'),
-(44, 29, 16, 'Honda-Jazz', 'Honda-Jazz', 'honda-jazz', 500000, 'Honda-Jazz', 'Publish', 'Honda-Jazz.png', '2020-05-18 07:51:07', '2020-05-23 15:38:56'),
-(45, 29, 11, 'a', 'a', 'a', 1, '1', 'Publish', 'shutterstock_575961700.jpg', '2020-05-18 08:02:40', '2020-05-18 06:02:40'),
-(46, 29, 11, 'b', 'b', 'b', 1, '1', 'Publish', 'buffet.jpg', '2020-05-18 08:02:57', '2020-05-18 06:02:57'),
-(47, 29, 11, 'c', 'c', 'c', 1, '1', 'Publish', 'catering.jpg', '2020-05-18 08:03:40', '2020-05-18 06:03:40'),
-(48, 29, 11, 'd', 'd', 'd', 1, '1', 'Publish', 'maxresdefault1.jpg', '2020-05-18 08:05:20', '2020-05-18 06:05:20'),
-(49, 29, 11, 'e', 'e', 'e', 1, '1', 'Publish', 'WeddingFoodTrends-Stonefire-Catering-1.jpg', '2020-05-18 08:05:46', '2020-05-18 06:05:46'),
-(50, 29, 11, 'f', 'f', 'f', 1, '1', 'Publish', 'photodune-10667334-catering-food-at-a-wedding-party-m.jpg', '2020-05-18 08:06:13', '2020-05-18 06:06:13'),
-(51, 29, 11, 'g', 'g', 'g', 1, '1', 'Publish', 'catering-01.jpg', '2020-05-18 08:07:21', '2020-05-18 06:07:21'),
-(52, 29, 11, 'h', 'h', 'h', 1, '1', 'Publish', 'wedding-caterers-in-Gurgaon.jpg', '2020-05-18 08:08:21', '2020-05-18 06:08:21'),
-(53, 29, 11, 'i', 'i', 'i', 1, '1', 'Publish', 'catering-12-1-600x480.jpg', '2020-05-18 08:08:53', '2020-05-18 06:08:53'),
-(54, 29, 11, 'j', 'j', 'j', 1, '1', 'Publish', '008.jpg', '2020-05-18 08:09:19', '2020-05-18 06:09:19'),
-(55, 29, 11, 'k', 'k', 'k', 1, '1', 'Publish', 'bn02.jpg', '2020-05-18 08:10:02', '2020-05-18 06:10:02'),
-(56, 29, 19, 'ba', 'a', 'ba', 1, 'a', 'Publish', '626-2.jpg', '2020-05-18 08:20:59', '2020-05-18 06:20:59'),
-(57, 29, 19, 'affwe', 'b', 'affwe', 33, 'av', 'Publish', '624-1_(1).jpg', '2020-05-18 08:21:23', '2020-05-18 06:21:23'),
-(58, 29, 19, 'avea', 'wve', 'avea', 2323, 'ea', 'Publish', '666-1.jpg', '2020-05-18 08:21:43', '2020-05-18 06:21:43'),
-(59, 29, 19, 'afdas', 'ffafe', 'afdas', 3, '3', 'Publish', '408-1.jpg', '2020-05-18 08:22:05', '2020-05-18 06:22:05'),
-(60, 29, 19, 'afas', 'afdsa', 'afas', 22, '22', 'Publish', '416-1.jpg', '2020-05-18 08:22:32', '2020-05-18 06:22:32'),
-(61, 29, 19, 'AD', 'ad', 'ad', 11, '11111', 'Publish', '376-1.jpg', '2020-05-18 08:22:49', '2020-05-18 06:22:49'),
-(62, 29, 19, 'EFA', 'AFE', 'efa', 3423, '232', 'Publish', '373-1.jpg', '2020-05-18 08:23:18', '2020-05-18 06:23:18'),
-(63, 29, 19, 'AFE', 'AFE', 'afe', 33, '33', 'Publish', '264-1.jpg', '2020-05-18 08:23:32', '2020-05-18 06:23:32'),
-(64, 29, 19, 'AFEAE', 'AFE', 'afeae', 343, '343', 'Publish', '471-1.jpg', '2020-05-18 08:23:53', '2020-05-18 06:23:53'),
-(65, 29, 19, 'AFEAFE', 'FASF', 'afeafe', 423, 'RRRS', 'Publish', '624-1.jpg', '2020-05-18 08:24:41', '2020-05-18 06:24:41'),
-(66, 29, 19, 'AAFASFE', 'AAF4', 'aafasfe', 444, 'AFE', 'Publish', '626-1.jpg', '2020-05-18 08:25:02', '2020-05-18 06:25:02'),
-(67, 29, 19, 'AFACERCCC', 'AFEA', 'afacerccc', 34, 'AFFA', 'Publish', '291-2.jpg', '2020-05-18 08:25:26', '2020-05-18 06:25:42'),
-(68, 29, 19, 'AFEAF', 'AFASF', 'afeaf', 333, 'VDSVSD', 'Publish', '122-1.jpg', '2020-05-18 08:26:00', '2020-05-18 06:26:00'),
-(70, 29, 13, 'afeafeav', 'afea', 'afeafeav', 22, '22', 'Publish', '792af00ab3058f499832526111ce0781.jpg', '2020-05-18 08:29:41', '2020-05-18 06:29:41'),
-(71, 29, 18, '1sfef', 'Hotel Madani', '1sfef', 323, '2323', 'Publish', 'undangan-pernikahan-1100x675.jpg', '2020-05-18 08:37:08', '2020-05-18 06:37:08'),
-(72, 29, 18, 'aeffasvevva', 'afea', 'aeffasvevva', 3333333, '333333', 'Publish', 'hipwee-undangan_pernikahan_vintage.jpg', '2020-05-18 08:38:26', '2020-05-18 06:38:26'),
-(73, 29, 18, 'aefaf', 'fase', 'aefaf', 3333333, '3333333', 'Publish', 'undangan-klasik.jpg', '2020-05-18 08:38:51', '2020-05-18 06:38:51'),
-(74, 29, 18, 'sccscs', 'csccc', 'sccscs', 2147483647, '2222222tttt', 'Publish', 'und9.jpg', '2020-05-18 08:42:15', '2020-05-18 06:42:15'),
-(75, 29, 14, 'aaa', 'aaa', 'aaa', 111, 'aaa', 'Publish', '1.png', '2020-05-22 09:00:15', '2020-05-22 07:25:49'),
-(76, 29, 19, '12323232323', 'Hotel Madani', '12323232323', 23232, '3232', 'Publish', '21.png', '2020-05-23 17:28:22', '2020-05-23 15:28:22'),
-(77, 29, 9, 'sgsgs', 'Hotel Manjawa', 'sgsgs', 4545, '4545', 'Publish', '3.png', '2020-05-23 17:28:59', '2020-05-23 15:28:59'),
-(78, 29, 9, 'wtwtwtwt', 'Hotel Manjawa', 'wtwtwtwt', 4545, '4545', 'Publish', '4.png', '2020-05-23 17:29:25', '2020-05-23 15:29:25');
+(72, 29, 26, '1001', 'Paket Hemat A', '1001', 5000000, 'Paket Rumahan A', 'Publish', 'Rumahan_A.jpg', '2020-07-06 06:47:56', '2020-07-06 04:47:56'),
+(73, 29, 26, '1002', 'Paket Hemat B', '1002', 10000000, 'Paket Rumahan', 'Publish', 'Rumahan_B.jpg', '2020-07-06 06:50:00', '2020-07-06 04:50:00'),
+(74, 29, 26, '1003', 'Paket Hemat B', '1003', 13000000, 'Paket Rumahan', 'Publish', 'Rumahan_C.jpg', '2020-07-06 07:33:00', '2020-07-06 05:33:00'),
+(75, 29, 26, '1004', 'Paket Specta', '1004', 14000000, 'Paket Rumahan', 'Publish', 'Paket_Specta.jpg', '2020-07-08 08:53:49', '2020-07-08 06:53:49'),
+(76, 29, 26, '1005', 'Paket Pavorit', '1005', 25000000, 'Paket Rumahan', 'Publish', 'Paket_Pavorit.jpg', '2020-07-08 08:55:52', '2020-07-08 06:55:52'),
+(77, 29, 26, '1006', 'Paket Recomended', '1006', 38000000, 'Paket Rumahan', 'Publish', 'Paket_Recomended.jpg', '2020-07-08 08:57:26', '2020-07-08 06:57:26'),
+(78, 29, 26, '1007', 'Paket Populer', '1007', 50000000, 'Paket Rumahan', 'Publish', 'Paket_Populer.jpg', '2020-07-08 08:58:12', '2020-07-08 06:58:12'),
+(79, 29, 27, '10001', 'Paket Special Populer', '10001', 59000000, 'Paket Gedung', 'Publish', 'Special.jpg', '2020-07-08 09:03:51', '2020-07-08 07:18:56'),
+(80, 29, 27, '10002', 'Paket Royal Wedding', '10002', 78000000, 'Paket Gedung', 'Publish', 'Royal_Wedding.jpg', '2020-07-08 09:09:15', '2020-07-08 07:09:15'),
+(81, 29, 27, '10003', 'Paket Special', '10003', 44000000, 'Paket Gedung', 'Publish', 'Special1.jpg', '2020-07-08 09:20:46', '2020-07-08 07:20:46'),
+(82, 29, 27, '10004', 'Paket Gedung Hemat A', '10004', 13000000, 'Paket Gedung', 'Publish', 'Gedung_Hemat_A.jpg', '2020-07-08 09:22:28', '2020-07-08 07:22:28'),
+(83, 29, 27, '10005', 'Paket Gedung Hemat B', '10005', 14500000, 'Paket Gedung', 'Publish', 'Gedung_Hemat_B.jpg', '2020-07-08 09:24:51', '2020-07-08 07:24:51'),
+(84, 29, 27, '10006', 'Paket Gedung Hemat C', '10006', 17000000, 'Paket Gedung', 'Publish', 'Gedung_Hemat_C.jpg', '2020-07-08 09:27:00', '2020-07-08 07:27:00');
 
 -- --------------------------------------------------------
 
@@ -151,13 +98,6 @@ CREATE TABLE `tbl_foto` (
   `foto` varchar(255) NOT NULL,
   `tanggal_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_foto`
---
-
-INSERT INTO `tbl_foto` (`id_foto`, `id_pegawai`, `id_fasilitas`, `judul_foto`, `foto`, `tanggal_update`) VALUES
-(4, 29, 75, 'ddd', '2.png', '2020-05-22 07:35:48');
 
 -- --------------------------------------------------------
 
@@ -178,17 +118,14 @@ CREATE TABLE `tbl_galleri` (
 --
 
 INSERT INTO `tbl_galleri` (`id_galleri`, `judul_foto`, `foto`, `tanggal_post`, `tanggal_update`) VALUES
-(1, 'New', 'gallery-2.jpg', '2020-04-07 11:49:00', '2020-05-23 15:56:13'),
-(3, 'New', 'gallery-3.jpg', '2020-04-07 11:50:34', '2020-05-23 15:56:19'),
-(4, 'New', 'gallery-6.jpg', '2020-04-07 11:52:28', '2020-05-23 15:56:25'),
-(5, 'New', 'gallery-7.jpg', '2020-04-07 11:54:16', '2020-05-23 15:56:43'),
-(6, 'New', 'gallery-8.jpg', '2020-04-07 11:54:26', '2020-05-23 15:56:56'),
-(7, 'New', 'place-2.jpg', '2020-04-07 11:54:36', '2020-05-23 15:57:04'),
-(8, 'New', 'place-3.jpg', '2020-04-07 11:54:47', '2020-05-23 15:57:17'),
-(9, 'Di Hotel ', 'gallery-1.jpg', '2020-04-07 11:55:00', '2020-05-23 07:54:01'),
-(10, 'New', 'about.jpg', '2020-04-07 11:55:10', '2020-05-23 15:57:23'),
-(12, 'New', 'foto_pre_wedding_indoor_elegant_3.jpg', '2020-04-07 11:55:31', '2020-05-23 15:57:29'),
-(23, 'New', 'foto-prewedding-di-solo-studio-foto-pre-wedding-di-solo-jasa-foto-pre-wedding-di-solo-tempat-foto-005.jpg', '2020-05-18 05:34:36', '2020-05-23 15:57:38');
+(1, 'New', 'Screenshot_20200805-003445_Instagram.jpg', '2020-04-07 11:49:00', '2020-08-05 00:07:25'),
+(3, 'New', 'Screenshot_20200805-002255_Instagram.jpg', '2020-04-07 11:50:34', '2020-08-04 17:23:15'),
+(4, 'New', 'Screenshot_20200805-002618_Instagram.jpg', '2020-04-07 11:52:28', '2020-08-05 00:05:07'),
+(6, 'New', 'Screenshot_20200805-002810_Instagram.jpg', '2020-04-07 11:54:26', '2020-08-05 00:05:26'),
+(8, 'New', 'Screenshot_20200805-003358_Instagram.jpg', '2020-04-07 11:54:47', '2020-08-05 00:07:02'),
+(9, 'Di Hotel ', 'Screenshot_20200805-003026_Instagram.jpg', '2020-04-07 11:55:00', '2020-08-05 00:05:45'),
+(10, 'New', 'Screenshot_20200805-003131_Instagram.jpg', '2020-04-07 11:55:10', '2020-08-05 00:06:15'),
+(12, 'New', 'Screenshot_20200805-003158_Instagram.jpg', '2020-04-07 11:55:31', '2020-08-05 00:06:27');
 
 -- --------------------------------------------------------
 
@@ -225,8 +162,14 @@ CREATE TABLE `tbl_header_transaksi` (
 --
 
 INSERT INTO `tbl_header_transaksi` (`id_header_transaksi`, `id_pelanggan`, `tanggal_acara`, `tanggal_selesai_acara`, `tanggal_warna`, `nama`, `email`, `no_telp`, `alamat`, `kode_transaksi`, `tanggal_checkout`, `jumlah_transaksi`, `status_bayar`, `jumlah_bayar`, `rekening_pembayaran`, `rekening_pelanggan`, `bukti_bayar`, `id_rekening`, `tanggal_bayar`, `nama_bank`, `tanggal_update`) VALUES
-(50, 3, '2020-06-22', '2020-06-30', '#0071c5', 'Abi Rezardi', 'abirezardi@gmail.com', '081937037100', 'Lotim', '08062020EOVYGRN16MDFBJON', '2020-06-08 14:37:23', 13635, 'konfirmasi', '10,000,000', '101203', 'Saep', 'WIN_20181117_17_09_36_Pro.jpg', 1, '0000-00-00', 'Bank Indonesia (BI)', '2020-06-24 08:29:58'),
-(52, 5, '2020-07-01', '2020-07-05', '#FFD700', 'Ahli Madya', 'ahlimadya@gmail.com', '081937037105', 'UBG Mataram', '24062020IAE9CXWPVO4RYNE1', '2020-06-24 09:09:39', 500000, 'panding', '', '', '', '', 0, '0000-00-00', '', '2020-06-24 07:09:50');
+(67, 5, '2020-08-20', '2020-08-21', '#FF0000', 'Ahli Madya', 'ahlimadya@gmail.com', '081937037105', 'UBG Mataram', '07082020QKAJYCQ4TGZEKAVP', '2020-08-07 18:49:03', 13000000, 'konfirmasi', '13000000', '123456789', 'Ahlimadya', 'IMG-20200722-WA0005_(2).jpg', 8, '2020-08-10', 'Bank BRI', '2020-08-19 05:40:39'),
+(68, 5, '2020-08-14', '2020-08-15', '#0071c5', 'Ahli Madya', 'ahlimadya@gmail.com', '081937037105', 'UBG Mataram', '130820208EOSHLQJM2EK0FCN', '2020-08-13 05:36:58', 50000000, 'lunas', '50000000', '1011011', 'Ahlimadya', 'Untitled.png', 8, '2020-08-10', 'Bank BTN', '2020-08-13 03:48:28'),
+(69, 5, '2020-08-28', '2020-08-29', '#0071c5', 'Ahli Madya', 'ahlimadya@gmail.com', '081937037105', 'UBG Mataram', '14082020JAXD4K6ZWFBHTNWY', '2020-08-14 10:06:06', 17000000, 'lunas', '17000000', '1000', 'Ahlimadya', 'Untitled2.png', 8, '2020-08-16', 'Bank BRI', '2020-08-14 08:10:41'),
+(70, 5, '2020-08-28', '2020-08-29', '#0071c5', 'Ahli Madya', 'ahlimadya@gmail.com', '081937037105', 'UBG Mataram', '14082020ZCDDQVIJEKLHT6U4', '2020-08-14 10:21:20', 17000000, 'lunas', '17000000', '100000', 'Ahlimadya', 'Untitled3.png', 8, '2020-08-25', 'Bank BRI', '2020-08-14 08:27:55'),
+(72, 6, '2020-08-28', '2020-08-29', '#FFD700', 'Anjas Ardiyan Azhari', 'anjas@gmail.com', '081937037105', 'Jln.Medain Mataram, NTB', '14082020OHLGLZEYWWX5AMRS', '2020-08-14 10:31:12', 17000000, 'panding', '', '', '', '', 0, '0000-00-00', '', '2020-08-14 08:31:42'),
+(73, 5, '2020-09-22', '2020-09-30', '#0071c5', 'Ahli Madya', 'ahlimadya@gmail.com', '081937037105', 'UBG Mataram', '19082020I2C1VNEUIUA5S9P6', '2020-08-19 07:07:01', 17000000, 'konfirmasi', '1.000.000.000000', '2', 'Ahlimadya', 'IMG-20200722-WA0007_(2).jpg', 1, '2020-08-25', 'Bank Indonesia (BI)', '2020-08-19 05:39:54'),
+(74, 5, '2020-09-29', '2020-09-30', '#FF0000', 'Ahli Madya', 'ahlimadya@gmail.com', '081937037105', 'UBG Mataram', '19082020NPL8GHYSYIMKUAC0', '2020-08-19 07:41:18', 17000000, 'konfirmasi', '1.000.000.000.000.000.00', '2', 'Ahlimadya', 'IMG-20200722-WA0005.jpg', 1, '2020-08-31', 'Bank Indonesia (BI)', '2020-08-19 05:45:06'),
+(75, 5, '2020-09-30', '2020-09-30', '#FF0000', 'Ahli Madya', 'ahlimadya@gmail.com', '081937037105', 'UBG Mataram', '19082020ULMON5FH4I7PKYLC', '2020-08-19 14:52:10', 31500000, 'konfirmasi', '1.000.000.000000', '2', '2', 'IMG-20200722-WA00051.jpg', 1, '2020-08-25', 'Bank Indonesia (BI)', '2020-08-19 13:25:51');
 
 -- --------------------------------------------------------
 
@@ -247,19 +190,8 @@ CREATE TABLE `tbl_kategori` (
 --
 
 INSERT INTO `tbl_kategori` (`id_kategori`, `slug_kategori`, `nama_kategori`, `urutan`, `tanggal_update`) VALUES
-(9, 'dekorasi', 'Dekorasi', 2, '2020-01-18 18:46:24'),
-(10, 'honeymoon', 'Honeymoon', 3, '2020-01-18 18:46:35'),
-(11, 'makanan', 'Makanan', 4, '2020-01-18 18:46:44'),
-(12, 'salon', 'Salon', 5, '2020-01-18 18:44:37'),
-(13, 'busana', 'Busana', 6, '2020-01-18 18:44:45'),
-(14, 'bunga', 'Bunga', 7, '2020-01-18 18:44:53'),
-(15, 'kue-pengantin', 'Kue Pengantin', 8, '2020-01-18 18:45:01'),
-(16, 'kendaraan', 'Kendaraan', 9, '2020-01-18 18:45:18'),
-(18, 'kartu-undangan', 'Kartu Undangan', 11, '2020-01-18 18:45:38'),
-(19, 'souvenir', 'Souvenir', 12, '2020-01-18 18:45:47'),
-(20, 'entertaiment', 'Entertaiment', 13, '2020-01-18 18:45:55'),
-(21, 'pendukung-acara', 'Pendukung Acara', 14, '2020-01-18 18:46:06'),
-(25, 'gedung', 'Gedung', 1, '2020-04-08 05:25:01');
+(26, 'paket-rumahan', 'Paket Rumahan', 100, '2020-07-06 04:46:39'),
+(27, 'paket-gedung', 'Paket Gedung', 1000, '2020-07-08 07:00:04');
 
 -- --------------------------------------------------------
 
@@ -291,7 +223,7 @@ CREATE TABLE `tbl_konfigurasi` (
 --
 
 INSERT INTO `tbl_konfigurasi` (`id_konfigurasi`, `nama_web`, `tag_line`, `email`, `link_website`, `no_telp`, `alamat`, `google_maps`, `facebook`, `instagram`, `twitter`, `keyword`, `deskripsi`, `logo`, `icon`, `tanggal_update`) VALUES
-(1, 'GOLDEN CARE', 'Make Good Preweding', 'goldencare@gmail.com', 'goldencare.com', '0819370371051', 'Jln.Medain Mataram, Lombok, NTB', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.4322305215937!2d116.10266288519284!3d-8.5850356556437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc09df2b0eda1%3A0xf72a931b27e2c30b!2sGOLDEN%20CARE%20SALON%20%26%20WO!5e0!3m2!1sid!2sid!4v1584370635238!5m2!1sid!2sid', '@fb_GoldenCare', '@ig_GoldenCare', '@twitter_GoldenCare', 'wedding, Pernikahan', 'wedding organizer', 'icon.png', 'icon.png', '2020-05-18 05:10:13');
+(1, 'GOLDEN CARE', 'Make Good Preweding', 'goldencare@gmail.com', 'goldencare.com', '0819370371051', 'Jln.Medain Mataram, Lombok, NTB', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.4322305215937!2d116.10266288519284!3d-8.5850356556437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdc09df2b0eda1%3A0xf72a931b27e2c30b!2sGOLDEN%20CARE%20SALON%20%26%20WO!5e0!3m2!1sid!2sid!4v1584370635238!5m2!1sid!2sid', '@fb_GoldenCare', '@ig_GoldenCare', '@twitter_GoldenCare', 'wedding, Pernikahan', 'wedding organizer', 'icon.png', 'icon1.png', '2020-08-05 00:20:11');
 
 -- --------------------------------------------------------
 
@@ -316,7 +248,7 @@ CREATE TABLE `tbl_pegawai` (
 
 INSERT INTO `tbl_pegawai` (`id_pegawai`, `nama`, `username`, `password`, `no_telp`, `alamat`, `akses_level`, `tanggal_update`) VALUES
 (29, 'Anjas Ardiyan Azhari', 'Pegawai', '3b9b3a03ca4d44b0fd4e0627c1daa668a47e7c2a', '123456789101', 'Lombok', 'Admin', '2020-05-17 04:54:19'),
-(30, 'I ketut jayadi', 'Operator', 'd0e687b079fb70f2208d1f8d2c75d64d74925496', '221212121211', 'Bali \r\n\r\n', 'Operator', '2020-05-17 04:53:40');
+(30, 'I ketut', 'Operator', 'd0e687b079fb70f2208d1f8d2c75d64d74925496', '221212121211', 'Bali \r\n\r\n', 'Operator', '2020-08-04 14:25:37');
 
 -- --------------------------------------------------------
 
@@ -341,9 +273,8 @@ CREATE TABLE `tbl_pelanggan` (
 --
 
 INSERT INTO `tbl_pelanggan` (`id_pelanggan`, `status`, `nama`, `email`, `password`, `no_telp`, `alamat`, `tanggal_registrasi`, `tanggal_update`) VALUES
-(3, 'Pending', 'abi', 'abirezardi@gmail.com', 'f35be6b71e94a23005e798f30799c4020bd2fdd0', '081937037100', 'Lotim', '2020-05-17 06:56:29', '2020-06-24 07:44:22'),
-(4, 'Pending', 'Saripudin Ambara', 'saripudinambara@gmail.com', '990565651cd7ee7fad1ea27455fc486fce85d81b', '081937137260', 'Loteng', '2020-05-17 06:59:34', '2020-05-17 04:59:34'),
-(5, 'Pending', 'Ahli Madya', 'ahlimadya@gmail.com', '20652032c9f2a65b3d47c41b36ba67068606acce', '081937037105', 'UBG Mataram', '2020-06-24 09:01:36', '2020-06-24 07:01:36');
+(5, 'Pending', 'Ahli Madya', 'ahlimadya@gmail.com', '20652032c9f2a65b3d47c41b36ba67068606acce', '081937037105', 'UBG Mataram', '2020-06-24 09:01:36', '2020-07-07 00:49:54'),
+(6, 'Pending', 'Anjas Ardiyan Azhari', 'anjas@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', '081937037105', 'Jln.Medain Mataram, NTB', '2020-08-14 10:29:41', '2020-08-14 08:29:41');
 
 -- --------------------------------------------------------
 
@@ -391,8 +322,15 @@ CREATE TABLE `tbl_transaksi` (
 --
 
 INSERT INTO `tbl_transaksi` (`id_transaksi`, `id_header_transaksi`, `id_pelanggan`, `kode_transaksi`, `tanggal_checkout`, `id_fasilitas`, `harga`, `jumlah`, `total_harga`, `tanggal_update`) VALUES
-(35, 0, 3, '08062020EOVYGRN16MDFBJON', '2020-06-08 14:37:23', 78, 4545, 3, 13635, '2020-06-08 12:37:47'),
-(37, 0, 5, '24062020IAE9CXWPVO4RYNE1', '2020-06-24 09:09:39', 41, 500000, 1, 500000, '2020-06-24 07:09:50');
+(49, 0, 5, '07082020QKAJYCQ4TGZEKAVP', '2020-08-07 18:49:03', 82, 13000000, 1, 13000000, '2020-08-07 16:49:21'),
+(50, 0, 5, '130820208EOSHLQJM2EK0FCN', '2020-08-13 05:36:58', 78, 50000000, 1, 50000000, '2020-08-13 03:37:31'),
+(51, 0, 5, '14082020JAXD4K6ZWFBHTNWY', '2020-08-14 10:06:06', 84, 17000000, 1, 17000000, '2020-08-14 08:06:44'),
+(52, 0, 5, '14082020ZCDDQVIJEKLHT6U4', '2020-08-14 10:21:20', 84, 17000000, 1, 17000000, '2020-08-14 08:23:36'),
+(53, 0, 6, '14082020OHLGLZEYWWX5AMRS', '2020-08-14 10:31:12', 84, 17000000, 1, 17000000, '2020-08-14 08:31:42'),
+(54, 0, 5, '19082020I2C1VNEUIUA5S9P6', '2020-08-19 07:07:01', 84, 17000000, 1, 17000000, '2020-08-19 05:07:13'),
+(55, 0, 5, '19082020NPL8GHYSYIMKUAC0', '2020-08-19 07:41:18', 84, 17000000, 1, 17000000, '2020-08-19 05:41:28'),
+(56, 0, 5, '19082020ULMON5FH4I7PKYLC', '2020-08-19 14:52:10', 84, 17000000, 1, 17000000, '2020-08-19 12:52:23'),
+(57, 0, 5, '19082020ULMON5FH4I7PKYLC', '2020-08-19 14:52:10', 83, 14500000, 1, 14500000, '2020-08-19 12:52:23');
 
 --
 -- Indexes for dumped tables
@@ -477,37 +415,37 @@ ALTER TABLE `tbl_transaksi`
 -- AUTO_INCREMENT for table `tbl_contact`
 --
 ALTER TABLE `tbl_contact`
-  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_fasilitas`
 --
 ALTER TABLE `tbl_fasilitas`
-  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
 -- AUTO_INCREMENT for table `tbl_foto`
 --
 ALTER TABLE `tbl_foto`
-  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_galleri`
 --
 ALTER TABLE `tbl_galleri`
-  MODIFY `id_galleri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_galleri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tbl_header_transaksi`
 --
 ALTER TABLE `tbl_header_transaksi`
-  MODIFY `id_header_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id_header_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `tbl_konfigurasi`
@@ -525,7 +463,7 @@ ALTER TABLE `tbl_pegawai`
 -- AUTO_INCREMENT for table `tbl_pelanggan`
 --
 ALTER TABLE `tbl_pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_rekening`
@@ -537,7 +475,7 @@ ALTER TABLE `tbl_rekening`
 -- AUTO_INCREMENT for table `tbl_transaksi`
 --
 ALTER TABLE `tbl_transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- Constraints for dumped tables

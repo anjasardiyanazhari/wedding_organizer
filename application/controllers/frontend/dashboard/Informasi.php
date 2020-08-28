@@ -156,6 +156,7 @@ class Informasi extends CI_Controller
                     );
                     $this->m_header_transaksi->simpan_edit($header_transaksi->id_header_transaksi, $data);
                     $this->session->set_flashdata('success', 'Data Telah Di Update');
+                    $this->session->set_flashdata('success', 'Data Konfirmasi Pembayaran Telah Di Update');
                     redirect(base_url('frontend/dashboard/Informasi/konfirmasi/' . $header_transaksi->kode_transaksi), 'refresh');
                 }
                 // End Kondisi ketika edit data dan gambar
@@ -175,7 +176,7 @@ class Informasi extends CI_Controller
                     'nama_bank'             => $this->input->post('nama_bank'),
                 );
                 $this->m_header_transaksi->simpan_edit($header_transaksi->id_header_transaksi, $data);
-                $this->session->set_flashdata('success', 'Data Telah Di Update');
+                $this->session->set_flashdata('success', 'Data Konfirmasi Pembayaran Telah Di Update');
                 redirect(base_url('frontend/dashboard/Informasi/konfirmasi/' . $header_transaksi->kode_transaksi), 'refresh');
             }
         }

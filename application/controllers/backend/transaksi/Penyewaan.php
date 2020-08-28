@@ -107,6 +107,7 @@ class Penyewaan extends CI_Controller
 
         $this->db->where('id_header_transaksi', $header_transaksi->id_header_transaksi);
         $this->db->update('tbl_header_transaksi', ['status_bayar' => 'lunas', 'tanggal_warna' => '#0071c5']);
+        $this->session->set_flashdata('success', 'Data Konfirmasi Pembayaran Telah Di Update');
         redirect(base_url('backend/transaksi/Penyewaan/update/' . $header_transaksi->kode_transaksi), 'refresh');
     }
 
